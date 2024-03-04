@@ -1,0 +1,29 @@
+<section class='mx-auto h-screen max-w-6xl py-8 md:py-16 px-4'>
+  <div class='py-12 flex flex-col gap-y-6 gap-x-6 md:flex-row'>
+    <div class='flex flex-col gap-y-6'>
+      <h2 class='text-6xl text-primary-text'>
+        We design and build your next digital experience
+      </h2>
+      <p class='text-primary-text text-xl'>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci labore
+        incidunt saepe temporibus veritatis similique!
+      </p>
+    </div>
+    <img
+      id='hero-image'
+      src='../images/hero.webp'
+      alt='placeholder image'
+      class='md:w-1/2 rounded-xl hidden-clip-path-top'
+    />
+  </div>
+</section>
+
+<script>
+  import { gsap } from 'gsap';
+
+  gsap.to('#hero-image', {
+    clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)',
+    duration: 0.5,
+    ease: 'power3.in',
+  });
+</script>
