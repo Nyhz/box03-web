@@ -1,0 +1,48 @@
+---
+import AccordionWrapper from './components/AccordionWrapper.tsx';
+
+const items = [
+  {
+    itemNo: 1,
+    triggerText:
+      '¿Cómo puedo saber qué tamaño de trastero es adecuado para mí?',
+    contentText:
+      'Ofrecemos una variedad de tamaños de trasteros para satisfacer tus necesidades de almacenamiento. Nuestro equipo está aquí para ayudarte a decidir cuál es el tamaño adecuado para tus pertenencias. También puedes comprobarlo tú mismo concertando una visita !Contáctanos',
+  },
+  {
+    itemNo: 2,
+    triggerText: '¿Cómo puedo cancelar mi contrato de alquiler?',
+    contentText:
+      'Entendemos que las necesidades pueden cambiar. Puedes cancelar tu contrato de alquiler avisando con un mes de antelación sin costo adicional. ¡Contáctanos y te guiaremos a través del proceso!',
+  },
+  {
+    itemNo: 3,
+    triggerText: '¿Qué cosas NO puedo almacenar en mi trastero?',
+    contentText:
+      'No se pueden almacenar objetos que representen un riesgo para la seguridad de nuestras instalaciones o de otras personas. Esto incluye alimentos perecederos, materiales tóxicos, inflamables o ilegales. Nos comprometemos a mantener un ambiente seguro y protegido para todos nuestros clientes. Si tienes alguna duda sobre qué puedes o no puedes almacenar, no dudes en contactarnos. Estamos aquí para ayudarte a garantizar que tus pertenencias estén seguras.',
+  },
+  {
+    itemNo: 4,
+    triggerText: '¿Puedo acceder a mi trastero en cualquier momento?',
+    contentText:
+      'Sí, en Box03, te ofrecemos acceso ilimitado a tu trastero las 24 horas del día, los 7 días de la semana. Entendemos que la accesibilidad es importante para ti, por lo que te garantizamos la libertad de acceder a tus pertenencias en cualquier momento. Nuestro objetivo es proporcionarte la máxima comodidad y flexibilidad para satisfacer tus necesidades de almacenamiento. Siempre que tengas la necesidad de recuperar o almacenar algo, tu trastero estará disponible para ti.',
+  },
+  {
+    itemNo: 5,
+    triggerText: '¿Cómo puedo solicitar asistencia?',
+    contentText:
+      'Estamos aquí para ayudarte en todo momento. Puedes solicitar asistencia a través de la sección de contacto de este sitio web o por teléfono llamando al 676 106 057',
+  },
+];
+---
+
+<section class='mx-auto max-w-6xl py-8 md:py-16 px-4'>
+  <div class="flex flex-col md:flex-row gap-x-12">
+    <div class="w-full md:w-1/3">
+    <h3 class="text-4xl text-primary-title">Preguntas frecuentes</h3>
+    </div>
+    <div class="w-full mt-6 md:w-2/3">
+  <AccordionWrapper client:visible items={items} />
+</div>
+  </div>
+</section>

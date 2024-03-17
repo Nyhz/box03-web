@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root[theme="light"] {
+    --bg: 249 250 251;
+    --bg-component: 235 235 235;
+    --title: 0 0 0;
+    --title-hovered: 40 40 40;
+    --text: 90 90 90;
+    --text-inverse: 255 255 255;
+    --accent: 255 234 0;
+    --accent-dark: 250 204 21;
+  }
+
+  :root[theme="dark"] {
+    --bg: 23 23 23;
+    --bg-component: 45 45 45;
+    --title: 231 229 228;
+    --title-hovered: 190 190 190;
+    --text: 125 125 125;
+    --text-inverse: 0 0 0;
+    --accent: 250 204 21;
+    --accent-dark: 255 234 0;
+  }
+
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: 249 250 251;
+      --bg-component: 235 235 235;
+      --title: 0 0 0;
+      --title-hovered: 190 190 190;
+      --text: 90 90 90;
+      --text-inverse: 255 255 255;
+      --accent: 255 234 0;
+      --accent-dark: 250 204 21;
+    }
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: 23 23 23;
+      --bg-component: 45 45 45;
+      --title: 231 229 228;
+      --title-hovered: 190 190 190;
+      --text: 125 125 125;
+      --text-inverse: 0 0 0;
+
+      --accent: 250 204 21;
+      --accent-dark: 255 234 0;
+    }
+  }
+}
+
+@layer utilities {
+  .hidden-clip-path-top {
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+
+  .hidden-clip-path-bottom {
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
