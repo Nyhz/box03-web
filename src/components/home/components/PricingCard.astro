@@ -1,7 +1,6 @@
 ---
 import TickIcon from '../../icons/TickIcon.astro'
 
-
 interface IPrincingCardProps {
     name: string
     description: string
@@ -14,9 +13,6 @@ interface IPrincingCardProps {
 
 const { name, description, isFlagged, periodicity, price, available, features } = Astro.props as IPrincingCardProps
 ---
-
-
-
 <div class:list={["rounded-3xl p-8 flex flex-col", isFlagged ? 'bg-primary-bg-component' : 'bg-transparent']}>
     <h3 class="text-primary-title">{name}</h3>
     <p class="text-3xl text-primary-title mt-4">{price}{" "}<span class="text-sm text-primary-text">{periodicity}</span></p>
@@ -26,10 +22,10 @@ const { name, description, isFlagged, periodicity, price, available, features } 
             <li class="flex gap-3">
                 <TickIcon />
                 <span class="text-primary-text">{feature}</span>
-                </li>
+            </li>
         ))}
     </ul>
-
-    <button class="text-primary-text-inverse rounded-full bg-primary-text cursor-pointer hover:bg-primary-title-hovered disabled:cursor-default disabled:hover:bg-primary-text disabled:opacity-25  transition-all duration-250 py-4 px-2 mt-6" disabled={!available}>{available ? 'Reservar ahora' : 'Agotado'}</button>
-
+    <button class="contact-button text-primary-text-inverse rounded-full bg-primary-text cursor-pointer hover:bg-primary-title-hovered disabled:cursor-default disabled:hover:bg-primary-text disabled:opacity-25  transition-all duration-250 py-4 px-2 mt-6" disabled={!available}>
+        <a href="#contacto">{available ? 'Reservar ahora' : 'Agotado'}</a>
+    </button>
 </div>
