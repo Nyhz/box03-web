@@ -4,12 +4,6 @@ const { text, href } = Astro.props;
 
 <a
   href={href}
-  class='group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md bg-primary-accent px-6 font-medium text-black duration-500'
-  ><div class='translate-x-0 transition group-hover:-translate-x-[150%]'>
-    {text}
-  </div><div
-    class='absolute translate-x-[150%] transition group-hover:translate-x-0'
-  >
-    {text}
-  </div></a
+  class='rounded-full bg-primary-accent px-6 py-4 font-medium text-black hover:bg-primary-accent-dark duration-500'
+  >{text}</a
 >

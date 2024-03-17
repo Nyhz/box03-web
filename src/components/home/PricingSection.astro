@@ -1,0 +1,41 @@
+---
+import PricingCard from '../home/components/PricingCard.astro'
+
+const pricing = [
+  {
+    name: 'Tipo 1',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    periodicity: '/mes',
+    price: '100€',
+    available: true,
+    features: ['caracteristica1', 'caracteristica2', 'caracteristica3', 'Caracteristica4', 'Caracteristica5'],
+  },
+  {
+    name: 'Tipo 2',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    isFlagged: true,
+    periodicity: '/mes',
+    price: '150€',
+    available: true,
+    features: ['caracteristica1', 'caracteristica2', 'caracteristica3', 'Caracteristica4', 'Caracteristica5'],
+  },
+  {
+    name: 'Tipo 3',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    periodicity: '/mes',
+    price: '200€',
+    available: false,
+    features: ['caracteristica1', 'caracteristica2', 'caracteristica3', 'Caracteristica4', 'Caracteristica5'],
+  },
+];
+---
+
+<section class='mx-auto max-w-6xl py-0 md:py-16 px-4'>
+  <h3 class="text-4xl text-primary-title">Nuestros trasteros</h3>
+    <div class="flex flex-col md:flex-row gap-8 mt-16">
+    {pricing.map((item) => (
+        <PricingCard {...item}/>
+    ))}
+    </div>
+
+</section>

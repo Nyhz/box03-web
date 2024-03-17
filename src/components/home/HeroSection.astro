@@ -1,17 +1,20 @@
 ---
 import Button from './components/Button.astro';
+
+
+
 ---
 
 <section class='mx-auto max-w-6xl py-0 md:py-16 px-4'>
-  <div class='py-12 flex flex-col gap-y-6 gap-x-6 md:flex-row'>
+  <div class='py-16 md:py-12 flex flex-col gap-y-6 gap-x-6 md:flex-row'>
     <div class='flex flex-col gap-y-6'>
-      <h2 class='text-3xl md:text-6xl text-primary-text'>
+      <h2 class='text-4xl leading-10  md:text-6xl text-primary-title'>
         Tu espacio de almacenamiento en Ceuta
       </h2>
-      <p class='text-primary-text text-xl'>
+      <p class='text-primary-text leading-8 text-xl'>
         Flexibilidad sin ataduras. Alquila por el tiempo que necesites.
       </p>
-      <div class='max-w-xl'>
+      <div class='max-w-xl md:mt-8'>
         <Button text='Contrata ahora' href='#contacto' />
       </div>
     </div>
@@ -19,7 +22,7 @@ import Button from './components/Button.astro';
       id='hero-image'
       src='../images/hero.webp'
       alt='placeholder image'
-      class='md:w-1/2 rounded-xl hidden-clip-path-top'
+      class='mt-8 md:w-1/2 md:mt-0 rounded-3xl hidden-clip-path-top'
     />
   </div>
 </section>

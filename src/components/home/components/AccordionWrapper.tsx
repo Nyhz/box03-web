@@ -1,30 +1,36 @@
-import { type FC } from 'react';
+import { type FC } from "react"
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from './Accordion';
+} from "./Accordion"
 
 interface IAccordionWrapperProps {
   items: {
-    itemNo: number;
-    triggerText: string;
-    contentText: string;
-  }[];
+    itemNo: number
+    triggerText: string
+    contentText: string
+  }[]
 }
 
 const AccordionWrapper: FC<IAccordionWrapperProps> = ({ items }) => {
   return (
     <Accordion type='single' collapsible>
       {items.map((item) => (
-        <AccordionItem key={item.itemNo} value={`item-${item.itemNo}`}>
-          <AccordionTrigger>{item.triggerText}</AccordionTrigger>
+        <AccordionItem
+          className='data-[state=open]:bg-primary-bg-component px-4 data-[state=open]:rounded-xl transition-all'
+          key={item.itemNo}
+          value={`item-${item.itemNo}`}
+        >
+          <AccordionTrigger className='text-start'>
+            {item.triggerText}
+          </AccordionTrigger>
           <AccordionContent>{item.contentText}</AccordionContent>
         </AccordionItem>
       ))}
     </Accordion>
-  );
-};
+  )
+}
 
-export default AccordionWrapper;
+export default AccordionWrapper
