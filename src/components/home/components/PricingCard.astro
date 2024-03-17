@@ -30,6 +30,6 @@ const { name, description, isFlagged, periodicity, price, available, features } 
         ))}
     </ul>
 
-    <button class="rounded-full bg-primary-text cursor-pointer hover:bg-primary-title-hovered disabled:cursor-default disabled:hover:bg-primary-text disabled:opacity-25  transition-all duration-250 py-4 px-2 mt-6" disabled={!available}>{available ? 'Reservar ahora' : 'Agotado'}</button>
+    <button class="text-primary-text-inverse rounded-full bg-primary-text cursor-pointer hover:bg-primary-title-hovered disabled:cursor-default disabled:hover:bg-primary-text disabled:opacity-25  transition-all duration-250 py-4 px-2 mt-6" disabled={!available}>{available ? 'Reservar ahora' : 'Agotado'}</button>
 
 </div>

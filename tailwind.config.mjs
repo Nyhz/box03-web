@@ -12,6 +12,7 @@ export default {
           title: "rgb(var(--title) / <alpha-value>)",
           "title-hovered": "rgb(var(--title-hovered) / <alpha-value>)",
           text: "rgb(var(--text) / <alpha-value>)",
+          "text-inverse": "rgb(var(--text-inverse) / <alpha-value>)",
           accent: "rgb(var(--accent) / <alpha-value>)",
           "accent-dark": "rgb(var(--accent-dark) / <alpha-value>)",
         },

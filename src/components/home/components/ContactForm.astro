@@ -34,23 +34,16 @@ if (Astro.request.method === 'POST') {
 ---
 
 <form class='flex flex-col gap-4 w-full' method='post'>
-  <label class='flex flex-col gap-y-2 text-primary-title'>
-    Nombre
-    <input class='text-black px-1 rounded-md' type='text' name='name' />
-  </label>
-  <label class='flex flex-col gap-y-2 text-primary-title'>
-    Email
-    <input class='text-black px-1 rounded-md' type='email' name='email' />
-  </label>
-  <label class='flex flex-col gap-y-2 text-primary-title'>
-    Mensaje
-    <textarea class='text-black px-1 min-h-20 rounded-md' name='message'
+
+    <input class="text-primary-title-hovered hover:ring-primary-title-hovered focus:ring-primary-title-hovered bg-transparent outline-none ring-primary-title-hovered placeholder:text-primary-text block w-full appearance-none rounded-md border-0 px-4 py-4 text-base ring-1 transition focus:outline-none focus:ring-2"  
+    autocomplete="off"   placeholder="Nombre completo" type='text' name='name' />
+
+    <input class="text-primary-title-hovered hover:ring-primary-title-hovered focus:ring-primary-title-hovered bg-transparent outline-none ring-primary-title-hovered placeholder:text-primary-text block w-full appearance-none rounded-md border-0 px-4 py-4 text-base ring-1 transition focus:outline-none focus:ring-2"  
+     placeholder="Email" autocomplete="off" type='email' name='email' />
+
+    <textarea class="text-primary-title-hovered hover:ring-primary-title-hovered focus:ring-primary-title-hovered bg-transparent outline-none ring-primary-title-hovered placeholder:text-primary-text block w-full appearance-none rounded-md border-0 px-4 py-4 text-base ring-1 transition focus:outline-none focus:ring-2"  
+    placeholder="Mensaje" autocomplete="off" name='message'
     ></textarea>
-  </label>
-  <button
-    class='text-primary-text bg-primary-bg-component py-2 rounded-md'
-    type='submit'
-  >
-    Enviar
-  </button>
+    <button type="submit" class="text-primary-text-inverse rounded-full w-fit bg-primary-text cursor-pointer hover:bg-primary-title-hovered disabled:cursor-default disabled:hover:bg-primary-text disabled:opacity-25  transition-all duration-250 py-3 px-6 mt-2">Enviar</button>
+
 </form>
