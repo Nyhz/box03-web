@@ -1,6 +1,6 @@
 ---
-import LightIcon from './icons/LightIcon.astro';
-import DarkIcon from './icons/DarkIcon.astro';
+import LightIcon from '../icons/LightIcon.astro';
+import DarkIcon from '../icons/DarkIcon.astro';
 ---
 
 <div class='inline-flex items-center'>
@@ -9,7 +9,7 @@ import DarkIcon from './icons/DarkIcon.astro';
     <DarkIcon />
 
     <script>
-      import { switchColor } from '../lib/switch-color';
+      import { switchColor } from '../../lib/switch-color';
       const switchButton = document.getElementById('theme-switch');
 
       if (switchButton)

@@ -7,24 +7,30 @@ export default {
     extend: {
       colors: {
         primary: {
-          bg: 'rgb(var(--primary-bg) / <alpha-value>)',
-          'back-bg': 'rgb(var(--primary-back-bg) / <alpha-value>)',
-          text: 'rgb(var(--primary-text) / <alpha-value>)',
-          accent: 'rgb(var(--primary-accent) / <alpha-value>)',
-        },
-        secondary: {
-          bg: 'rgb(var(--secondary-bg) / <alpha-value>)',
-        },
-        label: {
-          bg: 'rgb(var(--label-bg) / <alpha-value>)',
+          bg: 'rgb(var(--bg) / <alpha-value>)',
+          'bg-component': 'rgb(var(--bg-component) / <alpha-value>)',
+          text: 'rgb(var(--text) / <alpha-value>)',
+          accent: 'rgb(var(--accent) / <alpha-value>)',
         },
       },
       fontFamily: {
         sans: ['Jost Variable', ...defaultTheme.fontFamily.sans],
       },
-      keyframes: {},
-      animation: {},
+      keyframes: {
+        'accordion-down': {
+          from: { height: '0' },
+          to: { height: 'var(--radix-accordion-content-height)' },
+        },
+        'accordion-up': {
+          from: { height: 'var(--radix-accordion-content-height)' },
+          to: { height: '0' },
+        },
+      },
+      animation: {
+        'accordion-down': 'accordion-down 0.2s ease-out',
+        'accordion-up': 'accordion-up 0.2s ease-out',
+      },
     },
   },
-  plugins: [],
+  plugins: [require('tailwindcss-animated')],
 };

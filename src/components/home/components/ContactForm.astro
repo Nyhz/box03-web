@@ -1,0 +1,56 @@
+---
+import sendGrid from '@sendgrid/mail';
+sendGrid.setApiKey(import.meta.env.SENDGRID_API_KEY);
+
+if (Astro.request.method === 'POST') {
+  try {
+    // Getting posted data from our contact form
+    let error = '';
+    const data = await Astro.request.formData();
+    const name = data.get('name') as string;
+    const email = data.get('email') as string;
+    const message = data.get('message') as string;
+
+    // Sending email
+    const msg = {
+      to: 'gestionbox03@gmail.com', // Change to your recipient
+      from: email, // Change to your verified sender
+      replyTo: { email: email, name: name },
+      subject: `Nuevo contacto de ${name} en box03`,
+      text: message,
+    };
+    await sendGrid
+      .send(msg)
+      .then(() => {
+        console.log('Email sent');
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  } catch (error) {
+    console.error(error);
+  }
+}
+---
+
+<form class='flex flex-col gap-4 w-full' method='post'>
+  <label class='flex flex-col gap-y-2 text-primary-text'>
+    Nombre
+    <input class='text-black px-1 rounded-md' type='text' name='name' />
+  </label>
+  <label class='flex flex-col gap-y-2 text-primary-text'>
+    Email
+    <input class='text-black px-1 rounded-md' type='email' name='email' />
+  </label>
+  <label class='flex flex-col gap-y-2 text-primary-text'>
+    Mensaje
+    <textarea class='text-black px-1 min-h-20 rounded-md' name='message'
+    ></textarea>
+  </label>
+  <button
+    class='text-primary-text bg-primary-bg-component py-2 rounded-md'
+    type='submit'
+  >
+    Enviar
+  </button>
+</form>

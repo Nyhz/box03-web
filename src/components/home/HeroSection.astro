@@ -1,13 +1,19 @@
-<section class='mx-auto h-screen max-w-6xl py-8 md:py-16 px-4'>
+---
+import Button from './components/Button.astro';
+---
+
+<section class='mx-auto max-w-6xl py-0 md:py-16 px-4'>
   <div class='py-12 flex flex-col gap-y-6 gap-x-6 md:flex-row'>
     <div class='flex flex-col gap-y-6'>
-      <h2 class='text-6xl text-primary-text'>
-        We design and build your next digital experience
+      <h2 class='text-3xl md:text-6xl text-primary-text'>
+        Tu espacio de almacenamiento en Ceuta
       </h2>
       <p class='text-primary-text text-xl'>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci labore
-        incidunt saepe temporibus veritatis similique!
+        Flexibilidad sin ataduras. Alquila por el tiempo que necesites.
       </p>
+      <div class='max-w-xl'>
+        <Button text='Contrata ahora' href='#contacto' />
+      </div>
     </div>
     <img
       id='hero-image'
