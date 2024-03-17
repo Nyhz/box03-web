@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @layer base {
-  :root[theme="light"] {
+  :root[theme='light'] {
     --bg: 249 250 251;
     --bg-component: 235 235 235;
     --title: 0 0 0;
@@ -14,7 +14,7 @@
     --accent-dark: 250 204 21;
   }
 
-  :root[theme="dark"] {
+  :root[theme='dark'] {
     --bg: 23 23 23;
     --bg-component: 45 45 45;
     --title: 231 229 228;

@@ -1,5 +1,5 @@
 ---
-import PricingCard from '../home/components/PricingCard.astro'
+import PricingCard from '../home/components/PricingCard.astro';
 
 const pricing = [
   {
@@ -8,7 +8,13 @@ const pricing = [
     periodicity: '/mes',
     price: '100€',
     available: true,
-    features: ['caracteristica1', 'caracteristica2', 'caracteristica3', 'Caracteristica4', 'Caracteristica5'],
+    features: [
+      'caracteristica1',
+      'caracteristica2',
+      'caracteristica3',
+      'Caracteristica4',
+      'Caracteristica5',
+    ],
   },
   {
     name: 'Tipo 2',
@@ -17,7 +23,13 @@ const pricing = [
     periodicity: '/mes',
     price: '150€',
     available: true,
-    features: ['caracteristica1', 'caracteristica2', 'caracteristica3', 'Caracteristica4', 'Caracteristica5'],
+    features: [
+      'caracteristica1',
+      'caracteristica2',
+      'caracteristica3',
+      'Caracteristica4',
+      'Caracteristica5',
+    ],
   },
   {
     name: 'Tipo 3',
@@ -25,17 +37,29 @@ const pricing = [
     periodicity: '/mes',
     price: '200€',
     available: false,
-    features: ['caracteristica1', 'caracteristica2', 'caracteristica3', 'Caracteristica4', 'Caracteristica5'],
+    features: [
+      'caracteristica1',
+      'caracteristica2',
+      'caracteristica3',
+      'Caracteristica4',
+      'Caracteristica5',
+    ],
   },
 ];
 ---
 
 <section id='trasteros' class='mx-auto max-w-6xl py-16 px-4'>
-  <h3 class="text-4xl text-primary-title">Elige tu trastero</h3>
-    <div class="flex flex-col md:flex-row gap-8 mt-16">
-    {pricing.map((item) => (
-        <PricingCard {...item}/>
-    ))}
-    </div>
-
+  <h3 class='text-4xl text-primary-title'>Elige tu trastero</h3>
+  <div class='flex flex-col md:flex-row gap-8 mt-16'>
+    {pricing.map((item) => <PricingCard {...item} />)}
+  </div>
 </section>
+
+<script>
+  const contactButtons = document.querySelectorAll('.contact-button');
+  contactButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      window.location.href = '#contacto';
+    });
+  });
+</script>
