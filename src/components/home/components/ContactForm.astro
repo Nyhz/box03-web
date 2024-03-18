@@ -1,10 +1,31 @@
 <form class='flex flex-col gap-4 w-full' method='post'>
-    <input class="text-primary-title-hovered hover:ring-primary-title-hovered focus:ring-primary-title-hovered bg-transparent outline-none ring-primary-title-hovered placeholder:text-primary-text block w-full appearance-none rounded-md border-0 px-4 py-4 text-base ring-1 transition focus:outline-none focus:ring-2"  
-    autocomplete="off"   placeholder="Nombre completo" type='text' name='name' />
-    <input class="text-primary-title-hovered hover:ring-primary-title-hovered focus:ring-primary-title-hovered bg-transparent outline-none ring-primary-title-hovered placeholder:text-primary-text block w-full appearance-none rounded-md border-0 px-4 py-4 text-base ring-1 transition focus:outline-none focus:ring-2"  
-     placeholder="Email" autocomplete="off" type='email' name='email' />
-    <textarea class="text-primary-title-hovered hover:ring-primary-title-hovered focus:ring-primary-title-hovered bg-transparent outline-none ring-primary-title-hovered placeholder:text-primary-text block w-full appearance-none rounded-md border-0 px-4 py-4 text-base ring-1 transition focus:outline-none focus:ring-2"  
-    placeholder="Mensaje" autocomplete="off" name='message'
-    ></textarea>
-    <button type="submit" class="text-primary-text-inverse rounded-full w-fit bg-primary-text cursor-pointer hover:bg-primary-title-hovered disabled:cursor-default disabled:hover:bg-primary-text disabled:opacity-25  transition-all duration-250 py-3 px-6 mt-2">Enviar</button>
+  <input
+    class='text-primary-title-hovered hover:ring-primary-title-hovered focus:ring-primary-title-hovered bg-transparent outline-none ring-primary-title-hovered placeholder:text-primary-text block w-full appearance-none rounded-md border-0 px-4 py-4 text-base ring-1 transition focus:outline-none focus:ring-2'
+    autocomplete='off'
+    placeholder='Nombre completo'
+    type='text'
+    name='name'
+    required
+  />
+
+  <input
+    class='text-primary-title-hovered hover:ring-primary-title-hovered focus:ring-primary-title-hovered bg-transparent outline-none ring-primary-title-hovered placeholder:text-primary-text block w-full appearance-none rounded-md border-0 px-4 py-4 text-base ring-1 transition focus:outline-none focus:ring-2'
+    placeholder='Email'
+    autocomplete='off'
+    type='email'
+    name='email'
+    required
+  />
+
+  <textarea
+    class='text-primary-title-hovered hover:ring-primary-title-hovered focus:ring-primary-title-hovered bg-transparent outline-none ring-primary-title-hovered placeholder:text-primary-text block w-full appearance-none rounded-md border-0 px-4 py-4 text-base ring-1 transition focus:outline-none focus:ring-2'
+    placeholder='Mensaje'
+    autocomplete='off'
+    name='message'
+    required></textarea>
+  <button
+    type='submit'
+    class='text-primary-text-inverse rounded-full w-fit bg-primary-text cursor-pointer hover:bg-primary-title-hovered disabled:cursor-default disabled:hover:bg-primary-text disabled:opacity-25 transition-all duration-250 py-3 px-6 mt-2'
+    >Enviar</button
+  >
 </form>

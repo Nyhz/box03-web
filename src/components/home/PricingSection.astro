@@ -1,5 +1,9 @@
 ---
+<<<<<<< HEAD
 import PricingCard from "../home/components/PricingCard.astro";
+=======
+import PricingCard from '../home/components/PricingCard.astro';
+>>>>>>> e24c801d785ad82d4857b1622da32dcc75b8c831
 
 const pricing = [
   {
@@ -9,7 +13,17 @@ const pricing = [
     periodicity: "/mes",
     price: " 100€",
     available: true,
+<<<<<<< HEAD
     features: ["Hasta 5m²", "Acceso las 24 horas, todos los días"],
+=======
+    features: [
+      'caracteristica1',
+      'caracteristica2',
+      'caracteristica3',
+      'Caracteristica4',
+      'Caracteristica5',
+    ],
+>>>>>>> e24c801d785ad82d4857b1622da32dcc75b8c831
   },
   {
     name: "Estandar",
@@ -19,7 +33,17 @@ const pricing = [
     periodicity: "/mes",
     price: " 150€",
     available: true,
+<<<<<<< HEAD
     features: ["Hasta 10m²", "Acceso las 24 horas, todos los días"],
+=======
+    features: [
+      'caracteristica1',
+      'caracteristica2',
+      'caracteristica3',
+      'Caracteristica4',
+      'Caracteristica5',
+    ],
+>>>>>>> e24c801d785ad82d4857b1622da32dcc75b8c831
   },
   {
     name: "Premium",
@@ -28,14 +52,42 @@ const pricing = [
     periodicity: "/mes",
     price: " 200€",
     available: false,
+<<<<<<< HEAD
     features: ["Más de 12m²", "Acceso las 24 horas, todos los días"],
+=======
+    features: [
+      'caracteristica1',
+      'caracteristica2',
+      'caracteristica3',
+      'Caracteristica4',
+      'Caracteristica5',
+    ],
+>>>>>>> e24c801d785ad82d4857b1622da32dcc75b8c831
   },
 ];
 ---
 
+<<<<<<< HEAD
 <section id="trasteros" class="mx-auto max-w-6xl py-16 px-4">
   <h3 class="text-4xl text-primary-title">Elige tu trastero</h3>
   <div class="flex flex-col md:flex-row gap-8 mt-16">
     {pricing.map((item) => <PricingCard {...item} />)}
   </div>
 </section>
+=======
+<section id='trasteros' class='mx-auto max-w-6xl py-16 px-4'>
+  <h3 class='text-4xl text-primary-title'>Elige tu trastero</h3>
+  <div class='flex flex-col md:flex-row gap-8 mt-16'>
+    {pricing.map((item) => <PricingCard {...item} />)}
+  </div>
+</section>
+
+<script>
+  const contactButtons = document.querySelectorAll('.contact-button');
+  contactButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      window.location.href = '#contacto';
+    });
+  });
+</script>
+>>>>>>> e24c801d785ad82d4857b1622da32dcc75b8c831

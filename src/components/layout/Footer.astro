@@ -1,24 +1,65 @@
-<footer class="bg-primary-bg-component py-20 px-4">
-    <div class="max-w-6xl mx-auto">
-        <h2 class="text-primary-title text-4xl">box03</h2>
-        <div class="w-full flex flex-row mt-12 md:mt-0">
-            <div class="w-0 md:w-2/3"></div>
-            <div class="w-full md:w-1/3 flex flex-col md:flex-row gap-x-32">
-                <div class="flex flex-col gap-y-2">
-                    <a href="#servicios" class="text-lg text-primary-title">Servicios</a>
-                    <a href="#trasteros" class="text-lg text-primary-title">Trasteros</a>
-                     <a href="#contacto" class="text-lg text-primary-title">Contacto</a>
+---
+import HeaderLink from '../home/components/HeaderLink.astro';
+import AddressIcon from '../icons/AddressIcon.astro';
+import PhoneIcon from '../icons/PhoneIcon.astro';
+import EmailIcon from '../icons/EmailIcon.astro';
 
+<<<<<<< HEAD
                 </div>
                 <div class="flex flex-col gap-y-2 pt-12 md:pt-0">
                      <span class="text-lg text-primary-title">hola@trasterosbox03.com</span>
                      <span class="text-lg text-primary-title">( +34 ) 666 111 222 </span>
                      <span class="text-lg text-primary-title"></span>
+=======
+const footerLinks = [
+  {
+    name: 'Servicios',
+    href: '#servicios',
+  },
+  {
+    name: 'Trasteros',
+    href: '#trasteros',
+  },
+  {
+    name: 'Contacto',
+    href: '#contacto',
+  },
+];
+>>>>>>> e24c801d785ad82d4857b1622da32dcc75b8c831
 
-                </div>
-            
-        
-            </div>
-        </div>
+const footerInfo = {
+  email: 'hola@trasterosbox03.com',
+  phone: '( +34 ) 666 111 222',
+  address: 'Calle Falsa 123',
+};
+---
+
+<footer class='bg-primary-bg-component py-20 px-4'>
+  <div class='max-w-6xl mx-auto'>
+    <h2 class='text-primary-title text-4xl'>box03</h2>
+    <div class='w-full flex flex-col md:flex-row gap-x-32 mt-12 md:mt-0'>
+      <div class='flex flex-col gap-y-2 md:ml-auto'>
+        {
+          footerLinks.map((link) => (
+            <HeaderLink name={link.name} href={link.href} />
+          ))
+        }
+      </div>
+
+      <div class='flex flex-col gap-y-2 pt-12 md:pt-0'>
+        <span
+          class='flex flex-row gap-x-2 items-center text-md text-primary-title'
+          ><EmailIcon />{footerInfo.email}</span
+        >
+        <span
+          class='flex flex-row gap-x-2 items-center text-md text-primary-title'
+          ><PhoneIcon />{footerInfo.phone}</span
+        >
+        <span
+          class='flex flex-row gap-x-2 items-center text-md text-primary-title'
+          ><AddressIcon />{footerInfo.address}</span
+        >
+      </div>
     </div>
+  </div>
 </footer>
