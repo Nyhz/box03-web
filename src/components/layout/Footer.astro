@@ -1,57 +1,50 @@
 ---
-import HeaderLink from '../home/components/HeaderLink.astro';
-import AddressIcon from '../icons/AddressIcon.astro';
-import PhoneIcon from '../icons/PhoneIcon.astro';
-import EmailIcon from '../icons/EmailIcon.astro';
+import HeaderLink from '../home/components/HeaderLink.astro'
+import AddressIcon from '../icons/AddressIcon.astro'
+import PhoneIcon from '../icons/PhoneIcon.astro'
+import EmailIcon from '../icons/EmailIcon.astro'
 
 const footerLinks = [
-  {
-    name: 'Servicios',
-    href: '#servicios',
-  },
-  {
-    name: 'Trasteros',
-    href: '#trasteros',
-  },
-  {
-    name: 'Contacto',
-    href: '#contacto',
-  },
-];
+	{
+		name: 'Servicios',
+		href: '#servicios'
+	},
+	{
+		name: 'Trasteros',
+		href: '#trasteros'
+	},
+	{
+		name: 'Contacto',
+		href: '#contacto'
+	}
+]
 
 const footerInfo = {
-  email: 'hola@trasterosbox03.com',
-  phone: '( +34 ) 666 111 222',
-  address: 'Calle Falsa 123',
-};
+	email: 'hola@trasterosbox03.com',
+	phone: '( +34 ) 666 111 222',
+	address: 'Calle Falsa 123'
+}
 ---
 
-<footer class='bg-primary-bg-component py-20 px-4'>
-  <div class='max-w-6xl mx-auto'>
-    <h2 class='text-primary-title text-4xl'>box03</h2>
-    <div class='w-full flex flex-col md:flex-row gap-x-32 mt-12 md:mt-0'>
-      <div class='flex flex-col gap-y-2 md:ml-auto'>
-        {
-          footerLinks.map((link) => (
-            <HeaderLink name={link.name} href={link.href} />
-          ))
-        }
-      </div>
+<footer class='bg-primary-bg-component px-4 py-20'>
+	<div class='mx-auto max-w-6xl'>
+		<h2 class='text-4xl text-primary-title'>box03</h2>
+		<div class='mt-12 flex w-full flex-col gap-x-32 md:mt-0 md:flex-row'>
+			<div class='flex flex-col gap-y-2 md:ml-auto'>
+				{footerLinks.map((link) => <HeaderLink name={link.name} href={link.href} />)}
+			</div>
 
-      <div class='flex flex-col gap-y-2 pt-12 md:pt-0'>
-        <span
-          class='flex flex-row gap-x-2 items-center text-md text-primary-title'
-          ><EmailIcon />{footerInfo.email}</span
-        >
-        <span
-          class='flex flex-row gap-x-2 items-center text-md text-primary-title'
-          ><PhoneIcon />{footerInfo.phone}</span
-        >
-        <span
-          class='flex flex-row gap-x-2 items-center text-md text-primary-title'
-          ><AddressIcon />{footerInfo.address}</span
-        >
-      </div>
-    </div>
-  </div>
+			<div class='flex flex-col gap-y-2 pt-12 md:pt-0'>
+				<span class='text-md flex flex-row items-center gap-x-2 text-primary-title'
+					><EmailIcon />{footerInfo.email}</span
+				>
+				<span class='text-md flex flex-row items-center gap-x-2 text-primary-title'
+					><PhoneIcon />{footerInfo.phone}</span
+				>
+				<span class='text-md flex flex-row items-center gap-x-2 text-primary-title'
+					><AddressIcon />{footerInfo.address}</span
+				>
+			</div>
+		</div>
+	</div>
 </footer>

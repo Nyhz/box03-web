@@ -1,21 +1,21 @@
 ---
-import LightIcon from '../icons/LightIcon.astro';
-import DarkIcon from '../icons/DarkIcon.astro';
+import LightIcon from '../icons/LightIcon.astro'
+import DarkIcon from '../icons/DarkIcon.astro'
 ---
 
 <div class='inline-flex items-center'>
-  <button id='theme-switch'>
-    <LightIcon />
-    <DarkIcon />
+	<button id='theme-switch'>
+		<LightIcon />
+		<DarkIcon />
 
-    <script>
-      import { switchColor } from '../../lib/switch-color';
-      const switchButton = document.getElementById('theme-switch');
+		<script>
+			import { switchColor } from '../../lib/switch-color'
+			const switchButton = document.getElementById('theme-switch')
 
-      if (switchButton)
-        switchButton.addEventListener('click', () => {
-          switchColor();
-        });
-    </script>
-  </button>
+			if (switchButton)
+				switchButton.addEventListener('click', () => {
+					switchColor()
+				})
+		</script>
+	</button>
 </div>

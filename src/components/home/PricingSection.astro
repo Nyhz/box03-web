@@ -1,65 +1,65 @@
 ---
-import PricingCard from '../home/components/PricingCard.astro';
+import PricingCard from '../home/components/PricingCard.astro'
 
 const pricing = [
-  {
-    name: 'Tipo 1',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    periodicity: '/mes',
-    price: '100€',
-    available: true,
-    features: [
-      'caracteristica1',
-      'caracteristica2',
-      'caracteristica3',
-      'Caracteristica4',
-      'Caracteristica5',
-    ],
-  },
-  {
-    name: 'Tipo 2',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    isFlagged: true,
-    periodicity: '/mes',
-    price: '150€',
-    available: true,
-    features: [
-      'caracteristica1',
-      'caracteristica2',
-      'caracteristica3',
-      'Caracteristica4',
-      'Caracteristica5',
-    ],
-  },
-  {
-    name: 'Tipo 3',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    periodicity: '/mes',
-    price: '200€',
-    available: false,
-    features: [
-      'caracteristica1',
-      'caracteristica2',
-      'caracteristica3',
-      'Caracteristica4',
-      'Caracteristica5',
-    ],
-  },
-];
+	{
+		name: 'Tipo 1',
+		description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+		periodicity: '/mes',
+		price: '100€',
+		available: true,
+		features: [
+			'caracteristica1',
+			'caracteristica2',
+			'caracteristica3',
+			'Caracteristica4',
+			'Caracteristica5'
+		]
+	},
+	{
+		name: 'Tipo 2',
+		description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+		isFlagged: true,
+		periodicity: '/mes',
+		price: '150€',
+		available: true,
+		features: [
+			'caracteristica1',
+			'caracteristica2',
+			'caracteristica3',
+			'Caracteristica4',
+			'Caracteristica5'
+		]
+	},
+	{
+		name: 'Tipo 3',
+		description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+		periodicity: '/mes',
+		price: '200€',
+		available: false,
+		features: [
+			'caracteristica1',
+			'caracteristica2',
+			'caracteristica3',
+			'Caracteristica4',
+			'Caracteristica5'
+		]
+	}
+]
 ---
 
-<section id='trasteros' class='mx-auto max-w-6xl py-16 px-4'>
-  <h3 class='text-4xl text-primary-title'>Elige tu trastero</h3>
-  <div class='flex flex-col md:flex-row gap-8 mt-16'>
-    {pricing.map((item) => <PricingCard {...item} />)}
-  </div>
+<section id='trasteros' class='mx-auto max-w-6xl px-4 py-16'>
+	<h3 class='text-4xl text-primary-title'>Elige tu trastero</h3>
+	<div class='mt-16 flex flex-col gap-8 md:flex-row'>
+		{pricing.map((item) => <PricingCard {...item} />)}
+	</div>
 </section>
 
 <script>
-  const contactButtons = document.querySelectorAll('.contact-button');
-  contactButtons.forEach((button) => {
-    button.addEventListener('click', () => {
-      window.location.href = '#contacto';
-    });
-  });
+	const contactButtons = document.querySelectorAll('.contact-button')
+	contactButtons.forEach((button) => {
+		button.addEventListener('click', () => {
+			window.location.href = '#contacto'
+		})
+	})
 </script>
