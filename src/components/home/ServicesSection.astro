@@ -1,28 +1,28 @@
 ---
-import ServiceCard from './components/ServiceCard.astro';
+import ServiceCard from "./components/ServiceCard.astro";
 
 const services = [
   {
-    title: 'Diseño Web',
+    title: "Acceso",
     description:
-      'Diseño de páginas web atractivas y funcionales, adaptadas a cualquier dispositivo.',
+      "Acceso flexible e ilimitado 7 días a la semana. Disfruta de la libertad de acceder a tus pertenencias cuando lo necesites.",
   },
   {
-    title: 'Desarrollo Web',
+    title: "Seguridad",
     description:
-      'Desarrollo de aplicaciones web a medida, con las últimas tecnologías.',
+      "Trasteros privados y discretos que aseguran la confidencialidad y seguridad de tus pertenencias. Un espacio solo para ti.",
   },
   {
-    title: 'SEO',
+    title: "Flexibilidad",
     description:
-      'Optimización de tu web para que aparezca en los primeros resultados de búsqueda.',
+      "Opciones de alquiler a partir de un mes de duración, ofreciendo soluciones que se adaptan a tus necesidades. A corto o largo plazo.",
   },
 ];
 ---
 
-<section id='servicios' class='mx-auto max-w-6xl py-16 pb-24 px-4'>
-  <h3 id='service-title' class='text-4xl text-primary-title'>Servicios</h3>
-  <div class='grid md:grid-cols-3 gap-8 mt-12'>
+<section id="servicios" class="mx-auto max-w-6xl py-16 pb-24 px-4">
+  <h3 id="service-title" class="text-4xl text-primary-title">Servicios</h3>
+  <div class="grid md:grid-cols-3 gap-8 mt-12">
     {
       services.map((service, index) => (
         <ServiceCard
@@ -36,61 +36,61 @@ const services = [
 </section>
 
 <script>
-  import { gsap } from 'gsap';
-  import { ScrollTrigger } from 'gsap/ScrollTrigger';
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
 
   gsap.registerPlugin(ScrollTrigger);
 
   const timeline = gsap.timeline({
     scrollTrigger: {
-      trigger: '#service-1',
-      start: 'top 80%',
-      end: 'bottom 20%',
-      toggleActions: 'play none none none',
+      trigger: "#service-1",
+      start: "top 80%",
+      end: "bottom 20%",
+      toggleActions: "play none none none",
     },
   });
 
   const timeline2 = gsap.timeline({
     scrollTrigger: {
-      trigger: '#service-2',
-      start: 'top 80%',
-      end: 'bottom 20%',
-      toggleActions: 'play none none none',
+      trigger: "#service-2",
+      start: "top 80%",
+      end: "bottom 20%",
+      toggleActions: "play none none none",
     },
   });
 
   const timeline3 = gsap.timeline({
     scrollTrigger: {
-      trigger: '#service-3',
-      start: 'top 80%',
-      end: 'bottom 20%',
-      toggleActions: 'play none none none',
+      trigger: "#service-3",
+      start: "top 80%",
+      end: "bottom 20%",
+      toggleActions: "play none none none",
     },
   });
 
-  timeline.to('#service-1', {
+  timeline.to("#service-1", {
     rotate: 0,
     opacity: 1,
     scale: 1,
     duration: 0.15,
-    ease: 'back',
+    ease: "back",
   });
 
-  timeline2.to('#service-2', {
+  timeline2.to("#service-2", {
     rotate: 0,
     opacity: 1,
     scale: 1,
     duration: 0.15,
     delay: 0.1,
-    ease: 'back',
+    ease: "back",
   });
 
-  timeline3.to('#service-3', {
+  timeline3.to("#service-3", {
     rotate: 0,
     opacity: 1,
     scale: 1,
     duration: 0.15,
     delay: 0.2,
-    ease: 'back',
+    ease: "back",
   });
 </script>
