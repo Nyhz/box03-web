@@ -1,96 +1,94 @@
 ---
-import ServiceCard from './components/ServiceCard.astro';
+import ServiceCard from './components/ServiceCard.astro'
 
 const services = [
-  {
-    title: 'Diseño Web',
-    description:
-      'Diseño de páginas web atractivas y funcionales, adaptadas a cualquier dispositivo.',
-  },
-  {
-    title: 'Desarrollo Web',
-    description:
-      'Desarrollo de aplicaciones web a medida, con las últimas tecnologías.',
-  },
-  {
-    title: 'SEO',
-    description:
-      'Optimización de tu web para que aparezca en los primeros resultados de búsqueda.',
-  },
-];
+	{
+		title: 'Diseño Web',
+		description:
+			'Diseño de páginas web atractivas y funcionales, adaptadas a cualquier dispositivo.'
+	},
+	{
+		title: 'Desarrollo Web',
+		description: 'Desarrollo de aplicaciones web a medida, con las últimas tecnologías.'
+	},
+	{
+		title: 'SEO',
+		description: 'Optimización de tu web para que aparezca en los primeros resultados de búsqueda.'
+	}
+]
 ---
 
-<section id='servicios' class='mx-auto max-w-6xl py-16 pb-24 px-4'>
-  <h3 id='service-title' class='text-4xl text-primary-title'>Servicios</h3>
-  <div class='grid md:grid-cols-3 gap-8 mt-12'>
-    {
-      services.map((service, index) => (
-        <ServiceCard
-          serviceNo={index + 1}
-          title={service.title}
-          description={service.description}
-        />
-      ))
-    }
-  </div>
+<section id='servicios' class='mx-auto max-w-6xl px-4 py-16 pb-24'>
+	<h3 id='service-title' class='text-4xl text-primary-title'>Servicios</h3>
+	<div class='mt-12 grid gap-8 md:grid-cols-3'>
+		{
+			services.map((service, index) => (
+				<ServiceCard
+					serviceNo={index + 1}
+					title={service.title}
+					description={service.description}
+				/>
+			))
+		}
+	</div>
 </section>
 
 <script>
-  import { gsap } from 'gsap';
-  import { ScrollTrigger } from 'gsap/ScrollTrigger';
+	import { gsap } from 'gsap'
+	import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
-  gsap.registerPlugin(ScrollTrigger);
+	gsap.registerPlugin(ScrollTrigger)
 
-  const timeline = gsap.timeline({
-    scrollTrigger: {
-      trigger: '#service-1',
-      start: 'top 80%',
-      end: 'bottom 20%',
-      toggleActions: 'play none none none',
-    },
-  });
+	const timeline = gsap.timeline({
+		scrollTrigger: {
+			trigger: '#service-1',
+			start: 'top 80%',
+			end: 'bottom 20%',
+			toggleActions: 'play none none none'
+		}
+	})
 
-  const timeline2 = gsap.timeline({
-    scrollTrigger: {
-      trigger: '#service-2',
-      start: 'top 80%',
-      end: 'bottom 20%',
-      toggleActions: 'play none none none',
-    },
-  });
+	const timeline2 = gsap.timeline({
+		scrollTrigger: {
+			trigger: '#service-2',
+			start: 'top 80%',
+			end: 'bottom 20%',
+			toggleActions: 'play none none none'
+		}
+	})
 
-  const timeline3 = gsap.timeline({
-    scrollTrigger: {
-      trigger: '#service-3',
-      start: 'top 80%',
-      end: 'bottom 20%',
-      toggleActions: 'play none none none',
-    },
-  });
+	const timeline3 = gsap.timeline({
+		scrollTrigger: {
+			trigger: '#service-3',
+			start: 'top 80%',
+			end: 'bottom 20%',
+			toggleActions: 'play none none none'
+		}
+	})
 
-  timeline.to('#service-1', {
-    rotate: 0,
-    opacity: 1,
-    scale: 1,
-    duration: 0.15,
-    ease: 'back',
-  });
+	timeline.to('#service-1', {
+		rotate: 0,
+		opacity: 1,
+		scale: 1,
+		duration: 0.15,
+		ease: 'back'
+	})
 
-  timeline2.to('#service-2', {
-    rotate: 0,
-    opacity: 1,
-    scale: 1,
-    duration: 0.15,
-    delay: 0.1,
-    ease: 'back',
-  });
+	timeline2.to('#service-2', {
+		rotate: 0,
+		opacity: 1,
+		scale: 1,
+		duration: 0.15,
+		delay: 0.1,
+		ease: 'back'
+	})
 
-  timeline3.to('#service-3', {
-    rotate: 0,
-    opacity: 1,
-    scale: 1,
-    duration: 0.15,
-    delay: 0.2,
-    ease: 'back',
-  });
+	timeline3.to('#service-3', {
+		rotate: 0,
+		opacity: 1,
+		scale: 1,
+		duration: 0.15,
+		delay: 0.2,
+		ease: 'back'
+	})
 </script>

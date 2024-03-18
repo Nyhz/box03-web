@@ -1,31 +1,29 @@
 ---
-import ThemeSwitch from '../global/ThemeSwitch.astro';
-import HeaderLink from './../home/components/HeaderLink.astro';
+import ThemeSwitch from '../global/ThemeSwitch.astro'
+import HeaderLink from './../home/components/HeaderLink.astro'
 
 const links = [
-  {
-    name: 'Servicios',
-    href: '#servicios',
-  },
-  {
-    name: 'Contacto',
-    href: '#contacto',
-  },
-];
+	{
+		name: 'Servicios',
+		href: '#servicios'
+	},
+	{
+		name: 'Contacto',
+		href: '#contacto'
+	}
+]
 ---
 
 <header
-  class='sticky top-0 z-50 w-full animate-fade-down bg-primary-bg animate-duration-1000 transition-all duration-500'
+	class='sticky top-0 z-50 w-full animate-fade-down bg-primary-bg transition-all duration-500 animate-duration-1000'
 >
-  <div
-    class='mx-auto flex h-full w-full max-w-6xl items-center justify-between px-4 py-4'
-  >
-    <a class='hoverable text-2xl text-primary-title' href='/'>box03logo</a>
-    <div class='hoverable flex items-center gap-x-12'>
-      <div class='hidden sm:flex gap-x-12'>
-        {links.map((link) => <HeaderLink name={link.name} href={link.href} />)}
-      </div>
-      <ThemeSwitch />
-    </div>
-  </div>
+	<div class='mx-auto flex h-full w-full max-w-6xl items-center justify-between px-4 py-4'>
+		<a class='hoverable text-2xl text-primary-title' href='/'>box03logo</a>
+		<div class='hoverable flex items-center gap-x-12'>
+			<div class='hidden gap-x-12 sm:flex'>
+				{links.map((link) => <HeaderLink name={link.name} href={link.href} />)}
+			</div>
+			<ThemeSwitch />
+		</div>
+	</div>
 </header>
