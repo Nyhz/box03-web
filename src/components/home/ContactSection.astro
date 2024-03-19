@@ -5,55 +5,50 @@ import PhoneIcon from '../icons/PhoneIcon.astro'
 import EmailIcon from '../icons/EmailIcon.astro'
 ---
 
-<section id='seccion-contacto' class='mx-auto max-w-6xl px-4 py-16'>
-	<h3 id='contact-title' class='text-4xl text-primary-title'>Contacto</h3>
-	<div class='md:gap-6-0 my-12 mb-24 flex flex-col gap-x-6 gap-y-6 md:flex-row'>
+<section id="seccion-contacto" class="mx-auto max-w-6xl px-4 py-16">
+	<h3 id="contact-title" class="text-4xl text-primary-title">Contacto</h3>
+	<div class="md:gap-6-0 my-12 mb-24 flex flex-col gap-x-6 gap-y-6 md:flex-row">
 		<div
-			id='info-card-1'
-			class='flex w-full flex-col gap-12 rounded-3xl
-    bg-primary-bg-component px-6 py-8 hover:scale-[105%] border-2 border-transparent hover:border-primary-accent transition-all'
+			id="info-card-1"
+			class="flex w-full flex-col gap-12 rounded-3xl
+    border-2 border-transparent bg-primary-bg-component px-6 py-8 transition-all hover:scale-[105%] hover:border-primary-accent"
 		>
 			<AddressIcon />
-			<div class='flex flex-col gap-y-4'>
-				<p class='duration-250 text-primary-title'>
-					Dirección Lorem Lorem
-				</p>
+			<div class="flex flex-col gap-y-4">
+				<p class="duration-250 text-primary-title">742 Evergreen Terrace</p>
+				<p class="duration-250 text-primary-text">Springfield</p>
 			</div>
 		</div>
 		<div
-			id='info-card-2'
-			class='flex w-full flex-col gap-12 rounded-3xl
-    bg-primary-bg-component px-6 py-8 hover:scale-[105%] border-2 border-transparent hover:border-primary-accent transition-all'
+			id="info-card-2"
+			class="flex w-full flex-col gap-12 rounded-3xl
+    border-2 border-transparent bg-primary-bg-component px-6 py-8 transition-all hover:scale-[105%] hover:border-primary-accent"
 		>
 			<PhoneIcon />
-			<div class='flex flex-col gap-y-4'>
-				<p class='duration-250 text-primary-title'>
-					Dirección Lorem Lorem
-				</p>
+			<div class="flex flex-col gap-y-4">
+				<p class="duration-250 text-primary-title">+34 676 106 057</p>
 			</div>
 		</div>
 		<div
-			id='info-card-3'
-			class='flex w-full flex-col gap-12 rounded-3xl
-    bg-primary-bg-component px-6 py-8 hover:scale-[105%] border-2 border-transparent hover:border-primary-accent transition-all'
+			id="info-card-3"
+			class="flex w-full flex-col gap-12 rounded-3xl
+    border-2 border-transparent bg-primary-bg-component px-6 py-8 transition-all hover:scale-[105%] hover:border-primary-accent"
 		>
 			<EmailIcon />
-			<div class='flex flex-col gap-y-4'>
-				<p class='duration-250 text-primary-title'>
-					Dirección Lorem Lorem
-				</p>
+			<div class="flex flex-col gap-y-4">
+				<p class="duration-250 text-primary-title">hola@trasterosbox03.com</p>
 			</div>
 		</div>
 	</div>
 
-	<div class='mt-6 flex flex-col gap-x-12 gap-y-10 md:flex-row'>
-		<div class='flex w-full flex-col md:w-1/2'>
-			<h4 class='text-4xl text-primary-title'>Ampliemos tu espacio juntos</h4>
-			<p class='mt-4 w-full text-lg leading-6 text-primary-text md:w-[85%]'>
+	<div class="mt-6 flex flex-col gap-x-12 gap-y-10 md:flex-row">
+		<div class="flex w-full flex-col md:w-1/2">
+			<h4 class="text-4xl text-primary-title">Ampliemos tu espacio juntos</h4>
+			<p class="mt-4 w-full text-lg leading-6 text-primary-text md:w-[85%]">
 				Escríbenos y te ayudaremos a encontrar la solución que mejor se adapte a tus necesidades.
 			</p>
 		</div>
-		<div class='md:w-1/2'>
+		<div class="md:w-1/2">
 			<ContactForm />
 		</div>
 	</div>
