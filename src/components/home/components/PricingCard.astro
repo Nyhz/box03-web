@@ -37,10 +37,10 @@ const { name, description, isFlagged, periodicity, price, available, features } 
 		}
 	</ul>
 
-	<button
-		class='contact-button duration-250 mt-6 cursor-pointer rounded-full bg-primary-text px-2 py-4 text-primary-text-inverse transition-all hover:bg-primary-title-hovered disabled:cursor-default disabled:opacity-25 disabled:hover:bg-primary-text'
-		disabled={!available}
+	<a
+		href="#seccion-contacto"
+		class='contact-button text-center duration-250 mt-6 cursor-pointer rounded-full bg-primary-text px-2 py-4 text-primary-text-inverse transition-all hover:bg-primary-title-hovered disabled:cursor-default disabled:opacity-25 disabled:hover:bg-primary-text'
 	>
 		{available ? 'Reservar ahora' : 'Agotado'}
-	</button>
+</a>
 </div>

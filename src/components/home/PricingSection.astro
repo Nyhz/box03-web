@@ -54,12 +54,3 @@ const pricing = [
 		{pricing.map((item) => <PricingCard {...item} />)}
 	</div>
 </section>
-
-<script>
-	const contactButtons = document.querySelectorAll('.contact-button')
-	contactButtons.forEach((button) => {
-		button.addEventListener('click', () => {
-			window.location.href = '#contacto'
-		})
-	})
-</script>
