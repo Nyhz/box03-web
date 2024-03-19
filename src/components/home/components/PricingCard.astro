@@ -21,17 +21,19 @@ const { name, description, isFlagged, periodicity, price, available, features } 
 		isFlagged ? 'bg-primary-bg-component' : 'bg-transparent'
 	]}
 >
-	<h3 class='text-primary-title'>{name}</h3>
-	<p class='mt-4 text-3xl text-primary-title'>
-		{price}{' '}<span class='text-sm text-primary-text'>{periodicity}</span>
+	<h3 class="text-primary-title">{name}</h3>
+	<p class="mt-4 text-3xl text-primary-title">
+		<span class="text-sm text-primary-title">desde </span>{price}{' '}<span
+			class="text-sm text-primary-text">{periodicity}</span
+		>
 	</p>
-	<p class='text-md mt-4 text-primary-text'>{description}</p>
-	<ul class='mt-6 space-y-6'>
+	<p class="text-md mt-4 text-primary-text">{description}</p>
+	<ul class="mt-6 space-y-6">
 		{
 			features.map((feature) => (
-				<li class='flex cursor-default gap-3 transition-all duration-300 hover:translate-x-4'>
+				<li class="flex cursor-default gap-3 transition-all duration-300 hover:translate-x-4">
 					<TickIcon />
-					<span class='text-primary-text'>{feature}</span>
+					<span class="text-primary-text">{feature}</span>
 				</li>
 			))
 		}
@@ -39,8 +41,8 @@ const { name, description, isFlagged, periodicity, price, available, features } 
 
 	<a
 		href="#seccion-contacto"
-		class='contact-button text-center duration-250 mt-6 cursor-pointer rounded-full bg-primary-text px-2 py-4 text-primary-text-inverse transition-all hover:bg-primary-title-hovered disabled:cursor-default disabled:opacity-25 disabled:hover:bg-primary-text'
+		class="contact-button duration-250 mt-6 cursor-pointer rounded-full bg-primary-text px-2 py-4 text-center text-primary-text-inverse transition-all hover:bg-primary-title-hovered disabled:cursor-default disabled:opacity-25 disabled:hover:bg-primary-text"
 	>
 		{available ? 'Reservar ahora' : 'Agotado'}
-</a>
+	</a>
 </div>
