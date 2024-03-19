@@ -3,24 +3,26 @@ import ServiceCard from './components/ServiceCard.astro'
 
 const services = [
 	{
-		title: 'Diseño Web',
+		title: 'Acceso',
 		description:
-			'Diseño de páginas web atractivas y funcionales, adaptadas a cualquier dispositivo.'
+			'Acceso flexible e ilimitado 7 días a la semana. Disfruta de la libertad de acceder a tus pertenencias cuando lo necesites.'
 	},
 	{
-		title: 'Desarrollo Web',
-		description: 'Desarrollo de aplicaciones web a medida, con las últimas tecnologías.'
+		title: 'Seguridad',
+		description:
+			'Trasteros privados y discretos que aseguran la confidencialidad y seguridad de tus pertenencias. Un espacio solo para ti.'
 	},
 	{
-		title: 'SEO',
-		description: 'Optimización de tu web para que aparezca en los primeros resultados de búsqueda.'
+		title: 'Flexibilidad',
+		description:
+			'Opciones de alquiler a partir de un mes de duración, ofreciendo soluciones que se adaptan a tus necesidades. A corto o largo plazo.'
 	}
 ]
 ---
 
-<section id='servicios' class='mx-auto max-w-6xl px-4 py-16 pb-24'>
-	<h3 id='service-title' class='text-4xl text-primary-title'>Servicios</h3>
-	<div class='mt-12 grid gap-8 md:grid-cols-3'>
+<section id="servicios" class="mx-auto max-w-6xl px-4 py-16 pb-24">
+	<h3 id="service-title" class="text-4xl text-primary-title">Servicios</h3>
+	<div class="mt-12 grid gap-8 md:grid-cols-3">
 		{
 			services.map((service, index) => (
 				<ServiceCard
