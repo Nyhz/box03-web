@@ -3,54 +3,53 @@ import PricingCard from '../home/components/PricingCard.astro'
 
 const pricing = [
 	{
-		name: 'Tipo 1',
-		description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+		name: 'Compacto',
+		description: 'Maximiza tu espacio en casa. Almacena documentos, cajas y objetos personales.',
 		periodicity: '/mes',
 		price: '100€',
 		available: true,
 		features: [
-			'caracteristica1',
-			'caracteristica2',
+			'Hasta 5m²',
+			'Acceso las 24 horas, todos los días',
 			'caracteristica3',
-			'Caracteristica4',
-			'Caracteristica5'
+			'caracteristica4'
 		]
 	},
 	{
-		name: 'Tipo 2',
-		description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+		name: 'Estandar',
+		description:
+			'No renuncies a tus hobbies. Guarda tus herramientas, bicicletas, esquís y todo lo que necesites.',
 		isFlagged: true,
 		periodicity: '/mes',
 		price: '150€',
 		available: true,
 		features: [
-			'caracteristica1',
-			'caracteristica2',
+			'Hasta 10m²',
+			'Acceso las 24 horas, todos los días',
 			'caracteristica3',
-			'Caracteristica4',
-			'Caracteristica5'
+			'caracteristica4'
 		]
 	},
 	{
 		name: 'Tipo 3',
-		description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+		description:
+			'Volumen excepcional. La elección idónea para enseres de gran tamaño y mobiliario.',
 		periodicity: '/mes',
 		price: '200€',
 		available: false,
 		features: [
-			'caracteristica1',
-			'caracteristica2',
+			'Más de 12m²',
+			'Acceso las 24 horas, todos los días',
 			'caracteristica3',
-			'Caracteristica4',
-			'Caracteristica5'
+			'caracteristica4'
 		]
 	}
 ]
 ---
 
-<section id='trasteros' class='mx-auto max-w-6xl px-4 py-16'>
-	<h3 class='text-4xl text-primary-title'>Elige tu trastero</h3>
-	<div class='mt-16 flex flex-col gap-8 md:flex-row'>
+<section id="trasteros" class="mx-auto max-w-6xl px-4 py-16">
+	<h3 class="text-4xl text-primary-title">Elige tu trastero</h3>
+	<div class="mt-16 flex flex-col gap-8 md:flex-row">
 		{pricing.map((item) => <PricingCard {...item} />)}
 	</div>
 </section>
