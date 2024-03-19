@@ -5,18 +5,27 @@ import SpaceIcon from '../icons/SpaceIcon.astro'
 import PrivateIcon from '../icons/PrivateIcon.astro'
 ---
 
-
 <section class='mx-auto max-w-6xl px-4 py-0 md:py-16'>
-    <div class='flex flex-col gap-x-6 gap-y-6 py-16 md:flex-row md:py-12'>
-        <div class="w-1/2 animate-fade-right">
-            <img src="/images/hero-contact.jpg" alt="Hero" class="w-full h-full object-cover rounded-lg" />
-        </div>
-        <div class="flex flex-col gap-y-12 w-1/2">
-            <h2 class="text-4xl md:text-5xl text-primary-title animate-fade-left">¿Estás decidido a <span class="text-primary-accent">alquilar</span> con nosotros?</h2>
-            <h2 class="text-4xl md:text-5xl text-primary-title animate-fade-right animate-delay-[1000ms]">¿Necesitas más información?</h2>
-            <p class="text-2xl text-primary-text mt-4 md:mt-6 flex animate-fade-left animate-delay-[2000ms]">Estamos a tu disposición</p>
-        </div>
-    </div>
+	<div class='flex flex-col gap-x-6 gap-y-6 py-16 md:flex-row md:py-12'>
+		<div class='w-full animate-fade-right md:w-1/2'>
+			<img
+				src='/images/hero-contact.jpg'
+				alt='Hero'
+				class='h-full w-full rounded-lg object-cover'
+			/>
+		</div>
+		<div class='flex w-full flex-col gap-y-12 md:w-1/2'>
+			<h2 class='animate-fade-left text-4xl text-primary-title md:text-5xl'>
+				¿Estás decidido a <span class='text-primary-accent'>alquilar</span> con nosotros?
+			</h2>
+			<h2 class='animate-fade-right text-4xl text-primary-title animate-delay-[1000ms] md:text-5xl'>
+				¿Necesitas más información?
+			</h2>
+			<p
+				class='mt-4 flex animate-fade-left text-2xl text-primary-text animate-delay-[2000ms] md:mt-6'
+			>
+				Estamos a tu disposición
+			</p>
+		</div>
+	</div>
 </section>
-
-
