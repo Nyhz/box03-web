@@ -4,11 +4,11 @@ const { serviceNo, title, description } = Astro.props
 
 <div
 	id={`service-${serviceNo}`}
-	class='flex scale-75 flex-col gap-12 rounded-3xl bg-primary-bg-component px-6
-  py-8 opacity-0'
+	class='flex flex-col gap-12 rounded-3xl bg-primary-bg-component px-6
+  py-8 border-2 border-transparent hover:border-primary-accent transition-all hover:scale-[105%]'
 >
 	<span class='text-primary-title'>0{serviceNo}</span>
-	<div class='duration-250 flex flex-col gap-y-4 transition-all hover:-translate-y-2'>
+	<div class='duration-250 flex flex-col gap-y-4'>
 		<h4 class='text-xl text-primary-title'>{title}</h4>
 		<p class='text-primary-text'>
 			{description}
