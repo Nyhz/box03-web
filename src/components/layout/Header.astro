@@ -17,9 +17,11 @@ const links = [
 	class='sticky top-0 z-50 w-full animate-fade-down bg-primary-bg transition-all duration-500 animate-duration-1000'
 >
 	<div class='mx-auto flex h-full w-full max-w-6xl items-center justify-between px-4 py-4'>
-		<a class='hoverable text-3xl text-primary-title' href='/'>box<span class="text-primary-accent">03</span>logo</a>
-		<div class='hoverable flex items-center gap-x-12'>
-			<div class='hidden gap-x-12 sm:flex'>
+		<a class='hoverable text-3xl text-primary-title' href='/'
+			>box<span class='text-primary-accent'>03</span>logo</a
+		>
+		<div class='hoverable flex gap-x-12'>
+			<div class='flex gap-x-6 sm:gap-x-12'>
 				{links.map((link) => <HeaderLink name={link.name} href={link.href} />)}
 			</div>
 		</div>
