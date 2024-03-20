@@ -4,40 +4,72 @@ import SpaceIcon from '../icons/SpaceIcon.astro'
 import PrivateIcon from '../icons/PrivateIcon.astro'
 ---
 
-<section class='mx-auto max-w-6xl px-4 pb-16 md:py-16'>
-	<div class='mt-8 grid grid-cols-1 gap-4 md:mt-16 md:grid-cols-3 md:gap-8'>
-		<div
-			class='flex animate-flip-down flex-col items-center rounded-xl border-2 border-transparent
- bg-primary-bg-component p-8 transition-all animate-once hover:border-2 hover:border-primary-accent'
-		>
-			<SpaceIcon />
-			<h3 class='mt-4 text-center text-3xl text-primary-title'>Amplia variedad de tamaños</h3>
-			<p class='mt-4 text-primary-text'>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint quaerat facilis possimus Rerum
-				officia cum ad necessitatibus tempore!
+<section class="mx-auto max-w-6xl px-4 py-0 md:py-16">
+	<div class="flex flex-col gap-x-6 gap-y-6 py-16 md:flex-row md:py-12">
+		<div class="flex w-1/2 animate-fade-right flex-col gap-12 gap-y-6">
+			<h2 class="text-4xl leading-10 text-primary-title md:text-6xl">BOX03</h2>
+			<p class="text-xl leading-8 text-primary-text">
+				Un nuevo servicio en Ceuta para el almacenamiento personal. Trasteros que encajan con tu
+				estilo de vida.
 			</p>
 		</div>
+		<div class="w-1/2 animate-fade-left gap-12">
+			<img
+				id="hero-image"
+				src="../images/hero-Precios.webp"
+				alt="placeholder image"
+				class="mt-8 rounded-3xl md:mt-0"
+			/>
+		</div>
+	</div>
+</section>
+<section class="mx-auto max-w-6xl px-4 pb-16">
+	<h3 id="service-title" class="text-4xl text-primary-title">Ventajas</h3>
+	<div class="md:gap-6-0 my-12 mb-24 flex flex-col gap-x-6 gap-y-6 md:flex-row">
 		<div
-			class='flex animate-flip-up flex-col items-center rounded-xl border-2 border-transparent
- bg-primary-bg-component p-8 transition-all animate-once hover:border-2 hover:border-primary-accent'
+			id="info-card-1"
+			class="flex w-full flex-col gap-12 rounded-3xl border-2 border-transparent bg-primary-bg-component px-6 py-8 transition-all hover:scale-[105%] hover:border-primary-accent"
 		>
 			<MapIcon />
-			<h3 class='mt-4 text-center text-3xl text-primary-title'>Ubicación excepcional</h3>
-			<p class='mt-4 text-primary-text'>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint quaerat facilis possimus Rerum
-				officia cum ad necessitatibus tempore!
-			</p>
+			<div class="flex flex-col gap-y-4">
+				<p class="duration-250 text-primary-title">Ubicación</p>
+				<p class="duration-250 text-primary-text">
+					Tu lugar de almacenamiento en pleno centro de Ceuta.
+				</p>
+			</div>
 		</div>
 		<div
-			class='flex animate-flip-down flex-col items-center rounded-xl border-2 border-transparent
- bg-primary-bg-component p-8 transition-all animate-once hover:border-2 hover:border-primary-accent'
+			id="info-card-2"
+			class="flex w-full flex-col gap-12 rounded-3xl border-2 border-transparent bg-primary-bg-component px-6 py-8 transition-all hover:scale-[105%] hover:border-primary-accent"
+		>
+			<SpaceIcon />
+			<div class="flex flex-col gap-y-4">
+				<p class="duration-250 text-primary-title">Versatilidad</p>
+				<p class="duration-250 text-primary-text">Contamos con una amplia variedad de tamaños.</p>
+			</div>
+		</div>
+		<div
+			id="info-card-3"
+			class="flex w-full flex-col gap-12 rounded-3xl border-2 border-transparent bg-primary-bg-component px-6 py-8 transition-all hover:scale-[105%] hover:border-primary-accent"
 		>
 			<PrivateIcon />
-			<h3 class='mt-4 text-center text-3xl text-primary-title'>Privacidad por encima de todo</h3>
-			<p class='mt-4 text-primary-text'>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint quaerat facilis possimus Rerum
-				officia cum ad necessitatibus tempore!
-			</p>
+			<div class="flex flex-col gap-y-4">
+				<p class="duration-250 text-primary-title">Privacidad</p>
+				<p class="duration-250 text-primary-text">
+					Lo que almacenas es cosa tuya. Nuestros trasteros son completamente privados.
+				</p>
+			</div>
 		</div>
+	</div>
+</section>
+
+<section class="mx-auto bg-primary-bg-component px-4 py-12 md:py-16">
+	<div class="mx-auto flex max-w-2xl flex-col items-center justify-center gap-y-6">
+		<h2 class="text-center text-4xl text-primary-title">¿Cómo funciona?</h2>
+		<p class="text-center text-primary-text">
+			Selecciona una categoría, contáctanos y firma tu contrato. Comienza a disfrutar de tu espacio
+			de almacenamiento en Box03 sin complicaciones.
+		</p>
+		<img class="mt-12 rounded-xl" src="/images/plano-trasteros.jpg" alt="plano de los trasteros" />
 	</div>
 </section>
