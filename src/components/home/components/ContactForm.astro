@@ -1,31 +1,36 @@
-<form class='flex w-full flex-col gap-4' method='post'>
+<form class="flex w-full flex-col gap-4 py-4" method="post">
 	<input
-		class='block w-full appearance-none rounded-md border-0 bg-transparent px-4 py-4 text-base text-primary-title-hovered outline-none ring-1 ring-primary-title-hovered transition placeholder:text-primary-text hover:ring-primary-accent focus:outline-none focus:ring-2 focus:ring-primary-accent'
-		autocomplete='off'
-		placeholder='Nombre completo'
-		type='text'
-		name='name'
+		class="block w-full appearance-none rounded-md border-0 bg-transparent px-4 py-4 text-base text-primary-title-hovered outline-none ring-1 ring-primary-title-hovered transition placeholder:text-primary-text hover:ring-primary-accent focus:outline-none focus:ring-2 focus:ring-primary-accent"
+		autocomplete="off"
+		placeholder="Nombre completo"
+		type="text"
+		name="name"
 		required
 	/>
 
 	<input
-		class='block w-full appearance-none rounded-md border-0 bg-transparent px-4 py-4 text-base text-primary-title-hovered outline-none ring-1 ring-primary-title-hovered transition placeholder:text-primary-text hover:ring-primary-accent focus:outline-none focus:ring-2 focus:ring-primary-accent'
-		placeholder='Email'
-		autocomplete='off'
-		type='email'
-		name='email'
+		class="block w-full appearance-none rounded-md border-0 bg-transparent px-4 py-4 text-base text-primary-title-hovered outline-none ring-1 ring-primary-title-hovered transition placeholder:text-primary-text hover:ring-primary-accent focus:outline-none focus:ring-2 focus:ring-primary-accent"
+		placeholder="Email"
+		autocomplete="off"
+		type="email"
+		name="email"
 		required
 	/>
 
 	<textarea
-		class='block w-full appearance-none rounded-md border-0 bg-transparent px-4 py-4 text-base text-primary-title-hovered outline-none ring-1 ring-primary-title-hovered transition placeholder:text-primary-text hover:ring-primary-accent focus:outline-none focus:ring-2 focus:ring-primary-accent'
-		placeholder='Mensaje'
-		autocomplete='off'
-		name='message'
+		class="block w-full appearance-none rounded-md border-0 bg-transparent px-4 py-4 text-base text-primary-title-hovered outline-none ring-1 ring-primary-title-hovered transition placeholder:text-primary-text hover:ring-primary-accent focus:outline-none focus:ring-2 focus:ring-primary-accent"
+		placeholder="Mensaje"
+		autocomplete="off"
+		name="message"
 		required></textarea>
-	<button
-		type='submit'
-		class='duration-250 mt-2 w-fit cursor-pointer rounded-full bg-primary-text px-6 py-3 text-primary-text-inverse transition-all hover:bg-primary-title-hovered disabled:cursor-default disabled:opacity-25 disabled:hover:bg-primary-text'
-		>Enviar</button
-	>
 </form>
+<input class="accent" type="checkbox" id="terms" name="terms" required="true" />
+<label class="ml-1" for="terms">
+	<span class="text-primary-text">He leído y acepto la</span>
+	<a href="/politica-de-privacidad" class="text-primary-accent">política de privacidad</a>
+</label>
+<button
+	type="submit"
+	class="duration-250 mt-4 flex w-fit cursor-pointer rounded-full bg-primary-text px-6 py-3 text-primary-text-inverse transition-all hover:bg-primary-title-hovered disabled:cursor-default disabled:opacity-25 disabled:hover:bg-primary-text"
+	>Enviar</button
+>
