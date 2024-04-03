@@ -18,26 +18,26 @@ const footerLinks = [
 const footerInfo = {
 	email: 'hola@trasterosbox03.com',
 	phone: '( +34 ) 666 111 222',
-	address: 'Calle Falsa 123'
+	address: 'Calle Sargento Mena 10'
 }
 ---
 
-<footer class='bg-primary-bg-component px-4 py-20'>
-	<div class='mx-auto max-w-6xl'>
-		<h2 class='text-4xl text-primary-title'>box<span class='text-primary-accent'>03</span>logo</h2>
-		<div class='mt-12 flex w-full flex-col gap-x-32 md:mt-0 md:flex-row'>
-			<div class='flex flex-col gap-y-2 md:ml-auto'>
+<footer class="bg-primary-bg-component px-4 py-20">
+	<div class="mx-auto max-w-6xl">
+		<h2 class="text-4xl text-primary-title">box<span class="text-primary-accent">03</span>logo</h2>
+		<div class="mt-12 flex w-full flex-col gap-x-32 md:mt-0 md:flex-row">
+			<div class="flex flex-col gap-y-2 md:ml-auto">
 				{footerLinks.map((link) => <HeaderLink name={link.name} href={link.href} />)}
 			</div>
 
-			<div class='flex flex-col gap-y-2 pt-12 md:pt-0'>
-				<span class='text-md flex flex-row items-center gap-x-2 text-primary-title'
+			<div class="flex flex-col gap-y-2 pt-12 md:pt-0">
+				<span class="text-md flex flex-row items-center gap-x-2 text-primary-title"
 					><EmailIcon />{footerInfo.email}</span
 				>
-				<span class='text-md flex flex-row items-center gap-x-2 text-primary-title'
+				<span class="text-md flex flex-row items-center gap-x-2 text-primary-title"
 					><PhoneIcon />{footerInfo.phone}</span
 				>
-				<span class='text-md flex flex-row items-center gap-x-2 text-primary-title'
+				<span class="text-md flex flex-row items-center gap-x-2 text-primary-title"
 					><AddressIcon />{footerInfo.address}</span
 				>
 			</div>
