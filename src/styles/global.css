@@ -76,3 +76,7 @@
 html {
 	scroll-behavior: smooth;
 }
+.list-disc-empty {
+	list-style-type: circle;
+	color: transparent;
+}
