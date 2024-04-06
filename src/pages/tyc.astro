@@ -1,5 +1,543 @@
 ---
 import Layout from '../layouts/Layout.astro'
+
+const COMPANY_NAME = 'Trasteros Box03'
+const COMPANY_REPRESENTATIVE = 'MIGUEL ÁNGEL MONTANO DE LA HOZ'
+const COMPANY_TAX_ID = '45.108.731-G'
+const COMPANY_REPRESENTATIVE2 = 'JOSE MARÍA MORA CAMACHO'
+const COMPANY_TAX_ID2 = '45.109.729-J'
+const COMPANY_EMAIL = 'hola@trasterosbox03.com'
+const COMPANY_ADDRESS = 'Avd. Independencia 7. Entreplanta. Oficina 8'
+const COMPANY_CITY = 'Ceuta'
+const COMPANY_ZIP_CODE = '51001'
+const SELF_STORAGE_ADDRESS = 'calle Sargento Mena, 10, local 1b'
+const COMPANY_PHONE = '676 106 057'
+const COMPANY_PHONE2 = '660 93 15 42'
 ---
 
-<Layout title="Nuestro términos y condiciones|trasterosbox03.es" />
+<Layout title="Nuestro términos y condiciones|trasterosbox03.es">
+	<section class="mx-auto max-w-6xl px-4 py-0 md:py-16">
+		<div class="flex animate-fade-right flex-col gap-y-6">
+			<h2 class="text-4xl leading-10 text-primary-title md:text-6xl">
+				Condiciones generales de {COMPANY_NAME}
+			</h2>
+		</div>
+	</section>
+	<section class="mx-auto max-w-6xl px-4 py-6">
+		<h4 class="text-xl text-primary-title">EXPONEN</h4>
+	</section>
+	<section class="mx-auto max-w-6xl px-4 py-6">
+		<ul class="ml-5 list-outside list-roman text-primary-text">
+			<li class="mb-3">
+				Los arrendadores disponen de instalaciones en {COMPANY_CITY}, en la {SELF_STORAGE_ADDRESS},
+				con base en las cuales desean ofrecer diferentes servicios destinados a particulares y
+				empresas, que se describen en el presente documento.
+			</li>
+			<li class="mb-3">
+				El CLIENTE está interesado en disponer de alguno de dichos servicios, que se concretan en el
+				presente documento.
+			</li>
+			<li class="mb-3">
+				Y han llegado a un acuerdo sobre sus recíprocos intereses que recogen en las siguientes
+			</li>
+		</ul>
+	</section>
+	<section class="mx-auto max-w-6xl px-4 py-6">
+		<h4 class="text-xl text-primary-title">ESTIPULACIONES</h4>
+	</section>
+	<section class="mx-auto max-w-6xl px-4 py-6">
+		<h4 class="py-6 text-xl text-primary-title">Previa</h4>
+		<p class="mb-3 text-primary-text">
+			El presente contrato lo es de servicios y se regirá por lo estipulado en el mismo y, en su
+			defecto, por las disposiciones del código civil aplicables, excluyéndose expresamente en
+			virtud del artículo 1255 de este último, la aplicación de la Ley 29/1994, de arrendamientos
+			urbanos, a los servicios de puesta a disposición de espacios, asociados a otros servicios, con
+			los que conforma de forma unitaria e indisociable su objeto.
+		</p>
+		<p class="mb-3 text-primary-text">
+			El almacenamiento de bienes por parte del CLIENTE se realiza sin que los ARRENDADORES tenga
+			que conocer la naturaleza, consistencia, valor o importancia de los bienes almacenados. El
+			presente contrato no podrá, en ningún caso, asimilarse a un contrato de depósito; por tanto,
+			los ARRENDADORES, como tal, no tienen obligación de supervisión, custodia, mantenimiento o
+			conservación y, por tanto, de restitución de los bienes almacenados, en el sentido de los
+			artículos 1758 y siguientes del Código Civil. Bajo ninguna circunstancia se podrá considerar a
+			los ARRENDATARIOS como custodios o guardianes de los bienes que el CLIENTE almacena en el
+			espacio puesto a su disposición. Los ARRENDATARIOS no realizará ningún control sobre la
+			conformidad de los bienes almacenados durante el periodo de vigencia del contrato, excepto en
+			el caso de requerimiento por parte de la autoridad competente.
+		</p>
+	</section>
+	<section class="mx-auto max-w-6xl px-4 py-6">
+		<h4 class="py-6 text-xl text-primary-title">Primera. Objeto</h4>
+		<p class="mb-3 text-primary-text">
+			Es objeto del presente contrato la prestación de los servicios que, definidos inextenso en sus
+			ANEXOS, se relacionan a continuación, conformando un único e indisociable servicio que
+			comprenderá:
+		</p>
+		<ul class="ml-5 list-outside list-decimal text-primary-text">
+			<li class="mb-3">Servicios básicos.</li>
+			<li class="mb-3">
+				Servicios de almacenaje de pertenencias y/o mercancías en las instalaciones de los
+				ARRENDADORES bajo custodia del cliente, en espacios, boxes o almacenes, que se identifiquen
+				en el contrato, a los que tendrá acceso individualizado en el horario que tenga el centro.
+			</li>
+			<li class="mb-3">Servicio de custodia y videovigilancia en zonas comunes y control de acceso</li>
+			<li class="mb-3">
+				Servicio de aseguramiento de las pertenencias y mercancías almacenadas dentro de los límites
+				que se señalen.
+			</li>
+		</ul>
+	</section>
+	<section class="mx-auto max-w-6xl px-4 py-6">
+		<h4 class="py-6 text-xl text-primary-title">Segunda. Duración</h4>
+		<p class="mb-3 text-primary-text">
+			El servicio tendrá una duración inicial mínima de un mes, computado de fecha a fecha
+			acordándose como fecha de inicio la establecida en el contrato.
+		</p>
+		<p class="mb-3 text-primary-text">
+			El contrato quedará prorrogado automáticamente por días sucesivos, salvo que el CLIENTE o los
+			ARRENDATARIOS comuniquen su voluntad de resolverlo con cuatro (4) o siete (7) días de
+			antelación, respectivamente.
+		</p>
+	</section>
+	<section class="mx-auto max-w-6xl px-4 py-6">
+		<h4 class="py-6 text-xl text-primary-title">Tercera. Precio y forma de pago.</h4>
+		<p class="mb-3 text-primary-text">
+			Se emitirá una primera factura para ser abonada antes de darse inicio al contrato que incluirá
+			junto a la fianza, el precio de los servicios y elementos contratados en este acto, por los
+			días transcurridos desde el inicio del mismo hasta el día señalado.
+		</p>
+		<p class="mb-3 text-primary-text">
+			El pago de las sucesivas facturas se atenderá por domiciliación bancaria en la cuenta
+			titularidad del CLIENTE en la que acepta sean cargados por los ARRENDATARIOS los
+			correspondientes recibos. Se acuerda como medio alternativo de pago el uso de cualquier medio
+			electrónico que permita realizar adeudos en cualquier cuenta bancaria y específicamente en las
+			tarjetas de débito o crédito facilitadas por el CLIENTE. Autorizando el cliente no solo dichos
+			adeudos sino a la entidad bancaria para que efectúe los mismos en cada caso.
+		</p>
+		<p class="mb-3 text-primary-text">
+			Anualmente, al vencimiento de cada periodo anual, los precios se actualizarán teniendo en
+			cuenta el incremento del IPC (Índice de Precios al Consumo, de carácter general), sin que sea
+			obligada su comunicación.
+		</p>
+		<p class="mb-3 text-primary-text">
+			Las actualizaciones por los ARRENDATARIOS del precio de los servicios básicos o del de las
+			tarifas, sólo serán exigibles desde que se haya producido una notificación previa de siete (7) días naturales de las nuevas tarifas,
+			entendiéndose aceptadas en caso de silencio, y pudiendo, no obstante, resolverse el contrato
+			si no existiese respuesta aceptando las nuevas tarifas. La devolución de cualquier recibo, con
+			independencia de las consecuencias que de su impago puedan derivarse, conllevará el devengo de
+			una obligación de pago de diez (10) euros por cada recibo, en concepto de gastos de
+			devolución.
+		</p>
+		<p class="mb-3 text-primary-text">
+			Para detener la facturación, hasta como máximo, la fecha de efecto de la nueva renta, el
+			CLIENTE debe firmar obligatoriamente la declaración de devolución del box, quitar su candado y
+			dejar el box libre de sus enseres, y en el mismo estado en el que se le facilitó. En caso
+			contrario, la facturación continuará de pleno derecho.
+		</p>
+		<p class="mb-3 text-primary-text">
+			La devolución bancaria de cualquier pago conllevará la aplicación de gastos de gestión que
+			correspondan por parte de los ARRENDATARIOS.
+		</p>
+	</section>
+	<section class="mx-auto max-w-6xl px-4 py-6">
+		<h4 class="py-6 text-xl text-primary-title">
+			Cuarta. Acuerdos sobre el uso de las instalaciones.
+		</h4>
+		<ul class="ml-5 list-outside list-decimal text-primary-text">
+			<li class="mb-3">
+				Acceso.<br />Los ARRENDATARIOS garantizarán al CLIENTE el libre acceso al edificio y al box
+				donde se almacenen sus pertenencias o mercancías, en el horario que tenga cada centro en
+				cada momento, durante la vigencia del contrato. LIBRE ACCESO QUE QUEDA EXPRESAMENTE
+				CONDICIONADO A QUE EL CLIENTE SE ENCUENTRE AL CORRIENTE EN EL PAGO DEL PRECIO DE LOS
+				SERVICIOS CONTRATADOS. Por seguridad, el centro permanecerá cerrado todos los días del año
+				desde las 02.00 AM hasta las 05.00 AM, por lo que no se podrá tener acceso en dicha franja
+				horaria-.
+			</li>
+			<li class="mb-3">
+				Llaves.<br />Todo dispositivo de acceso que sea entregado al cliente habrá de ser devuelto
+				al finalizar el contrato, obligándose el CLIENTE, en caso de pérdida, no sólo a comunicarlo,
+				para su bloqueo y sustitución, sino a abonar su coste de 25 euros a los ARRENDATARIOS.
+			</li>
+			<li class="mb-3">
+				Personas autorizadas.<br />ólo se permitirá el acceso al CLIENTE y a las personas que éste
+				identifique mediante email dirigido a {COMPANY_EMAIL}. Deberá dejarse constancia, por este
+				mismo medio, de las personas que dejen de estar autorizadas.
+			</li>
+			<li class="mb-3">
+				Condiciones de uso y acceso a los servicios.<br />
+				<ul class="list-alpha ml-5 list-outside text-primary-text">
+					<li class="mb-3">El uso del box de almacenamiento es personal e intransferible.</li>
+					<li class="mb-3">No podrá ser señalado a ningún efecto como domicilio de ningún tipo.</li>
+					<li class="mb-3">
+						La legalidad, inocuidad y el cuidado de los bienes depositados en el mismo son asumidos
+						por el CLIENTE, quedando prohibido el almacenamiento de mercancías de procedencia o
+						posesión ilegal, perecederas, que produzcan olores o ruido, potencialmente peligrosas
+						para la salud o seguridad, armas o explosivos, documentos oficiales de identidad,
+						teléfonos móviles, objetos de arte, antigüedades o de colección de importante valor,
+						dinero en efecto o representado en documentos, metales preciosos, joyas.
+					</li>
+					<li class="mb-3">
+						Queda prohibido el almacenamiento de bienes de procedencia y/o tenencia ilegal o
+						ilícita, dañinos o potencialmente peligrosos, o que superen el valor declarado por el
+						cliente. No podrán almacenarse armas ni explosivos; ni mercancías perecederas, salvo
+						expresa autorización por escrito; ni aquellas que produzcan olores, vibración o ruido.
+					</li>
+					<li class="mb-3">En concreto, y sin que esta lista sea exhaustiva, estará prohibido almacenar:</li>
+					<ul class="ml-5 list-outside list-disc text-primary-text">
+						<li class="mb-3">Productos perecederos propensos a la podredumbre</li>
+						<li class="mb-3">
+							Residuos de cualquier tipo (materias animales, tóxicas, radioactivas, peligrosas,
+							etc.)
+						</li>
+						<li class="mb-3">
+							Cualquier objeto de arte y colección de cualquier tipo, pieles, joyería, muebles,
+							piedras preciosas y semipreciosas, cuadros valiosos y cualquier objeto metálico
+							precioso
+						</li>
+						<li class="mb-3">Animales, vivos o muertos</li>
+						<li class="mb-3">
+							Cerillas, mecheros, fuegos artificiales y/o cualquier otro elemento de naturaleza
+							pirotécnica
+						</li>
+						<li class="mb-3">Armas de fuego y sus municiones o explosivos</li>
+						<li class="mb-3">Aerosoles</li>
+						<li class="mb-3">
+							Cualquier sustancia ilegal, prohibida a la venta u objeto obtenido ilegalmente, como
+							drogas, imitaciones, productos procedentes del contrabando, robo o receptación, etc.
+						</li>
+						<li class="mb-3">
+							Cualquier sustancia, preparación u objeto:
+							<ul class="ml-5 list-outside list-disc text-primary-text">
+								<li class="mb-3">
+									Explosivos, como el gas comprimido o licuado, como el GLP, acetileno, butano,
+									propano, etc.
+								</li>
+								<li class="mb-3">
+									Inflamables, como barnices, aceites (vegetales, esenciales, minerales pesados),
+									resinas parafinas, fibras vegetales brutas (algodón, lino, cáñamo, etc.), acetona,
+									aguarrás, alcohol para quemar, petróleo, benceno, trementina, tolueno, nitratos
+									(de sodio, potasio, amonio, etc.)
+								</li>
+								<li class="mb-3">
+									Oxidantes, como el hidrógeno, cloratos (de amonio, potasio, etc.), peróxidos,
+									ácidos perclóricos fuertes.
+								</li>
+								<li class="mb-3">Tóxicos, como quitamanchas, pesticidas o ácido nítrico fumante</li>
+								<li class="mb-3">Nocivos, como los disolventes para la pintura, los quitamanchas</li>
+								<li class="mb-3">
+									Peligrosos para el medio ambiente, como pesticidas, herbicidas, metales pesados
+								</li>
+								<li class="mb-3">Irritantes, sensibilizantes, cancerígenos o mutágenos</li>
+							</ul>
+						</li>
+						<li class="mb-3">
+							En general, quedan prohibidas todas las sustancias etiquetadas con los siguientes
+							símbolos, o que sean objeto de condiciones de almacenamiento regulado:
+							<ul class="ml-5 list-outside list-disc text-primary-text">
+								<li class="mb-3">Productos inflamables</li>
+								<li class="mb-3">Productos explosivos</li>
+								<li class="mb-3">Productos comburentes</li>
+								<li class="mb-3">Materiales tóxicos</li>
+								<li class="mb-3">Sustancias corrosivas</li>
+								<li class="mb-3">Gas a presión</li>
+								<li class="mb-3">Productos peligrosos para el medio acuático</li>
+								<li class="mb-3">
+									Productos peligrosos para la salud: mutágeno, respiratorio, cancerígeno, riesgo
+									para la reproducción
+								</li>
+								<li class="mb-3">
+									Productos peligrosos para la salud; sensibilidad cutánea, inhalación, irritación
+									de los ojos
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<li class="mb-3">
+						Los ARRENDATARIOS podrán exigir al CLIENTE la exhibición de los bienes depositados y/o
+						su descripción completa y escrita.
+					</li>
+					<li class="mb-3">
+						El CLIENTE asume toda responsabilidad sobre los bienes que introduzca en las
+						instalaciones, desde su entrada en las mismas. De su recepción y manipulación que
+						realizará por sus propios medios y/o a su costa, así como de todas las operaciones de
+						recepción, expedición, y declaración formal de las estas; y de cualquier operación de
+						carga, descarga, transporte interior y almacenaje.
+					</li>
+					<li class="mb-3">
+						El almacenamiento requerirá una correcta distribución, así como un correcto embalaje, no
+						pudiendo realizarse directamente sobre el suelo, debiendo guardar, en todo momento, un
+						equilibrio estable y una disposición que no genere riesgos ni impida el acceso al box y
+						a sus instalaciones. El CLIENTE se compromete a seguir cualquier norma o indicación que
+						los ARRENDATARIOS le transmitan a tal fin. En particular, deberá respetar una distancia
+						no inferior a 60 centímetros entre los bienes almacenados y los dispositivos de
+						iluminación y protección contra incendios que se ubicasen en el interior del box; y una
+						limitación máxima de peso de 250 kilogramos por metro cuadrado.
+					</li>
+					<li class="mb-3">
+						No podrá realizarse, en el espacio contratado, ningún tipo de obra. A título
+						ilustrativo, pero no cerrado, queda expresamente prohibida: la realización de
+						perforaciones, la realización de divisiones fijas o móviles, la utilización de soportes
+						de cargas distintos a los que estén ya señalados.
+					</li>
+					<li class="mb-3">
+						El CLIENTE hará un uso responsable del box, y de las instalaciones, no pudiendo dejar
+						depositadas en las mismas ningún tipo de desperdicio o material, y se compromete a
+						devolver el box en el mismo buen estado de limpieza y vacío como lo recibe.
+					</li>
+					<li class="mb-3">
+						Todos los riesgos asociados a los bienes o a su almacenamiento en el box serán de cargo
+						y cuenta del cliente.<br />No obstante, los ARRENDATARIOS mantendrán en vigor un seguro
+						de forma gratuita para el CLIENTE, que cubrirá los riesgos que corran u originen los
+						bienes ubicados en el box cuyo almacenamiento no esté prohibido, hasta un valor que no
+						excederá el de 250 euros por metro cuadrado.<br />El aseguramiento por encima del valor
+						antes indicado corresponderá al CLIENTE, pudiendo solicitar a los ARRENDATARIOS una
+						mayor cobertura, que se facturaría aparte conforme a las tarifas vigentes.<br />Los
+						ARRENDATARIOS quedan eximidos de cualquier pérdida de bienes producida por hurto, y de
+						los daños y perjuicios no directos, especialmente los consecuenciales.
+						<ul class="ml-5 list-outside list-roman text-primary-text">
+							<li class="mb-3">
+								Cualquier daño que se produzca en el box o en el resto de instalaciones habrá de ser
+								inmediatamente comunicado a los ARRENDATARIOS, asumiendo el CLIENTE su reposición.
+							</li>
+							<li class="mb-3">
+								El CLIENTE deberá cumplir de forma estricta toda norma de conducta referente a
+								seguridad personal en cuanto a manipulación de cargas, y uso de equipos o
+								instalaciones que los ARRENDATARIOS pongan a su disposición, asumiendo toda
+								responsabilidad derivada de ello.
+							</li>
+							<li class="mb-3">
+								El box deberá permanecer cerrado mediante dispositivo de cierre de seguridad, que en
+								cada momento señalen los ARRENDATARIOS.
+							</li>
+							<li class="mb-3">
+								Cambio de box. Se autoriza por el CLIENTE a los ARRENDATARIOS a modificar el lugar
+								de almacenamiento inicial, cuando por cualquier causa sea justificadamente más
+								aconsejable la ubicación en otro box, o así lo requiera el mantenimiento y/o la
+								reparación del mismo, debiendo reunir la nueva ubicación las mismas o similares
+								características. Se encargarán, en tales casos, los ARRENDATARIOS, del traslado y
+								asumirán su coste íntegro. Para este cambio deberá en todo caso mediar un preaviso
+								de 48 horas al CLIENTE.
+							</li>
+							<li class="mb-3">
+								cceso al box. Los ARRENDATARIOS podrán acceder al box sin necesidad de preaviso, y
+								así queda autorizada, cuando una autoridad lo ordene, o en situaciones de urgencia
+								que lo requieran a fin de evitar daños a personas o bienes, al quedar resuelto el
+								contrato y PARA TRASLADAR O DESHACERSE DEL CONTENIDO que hubiese en el box conforme
+								a lo previsto en este contrato.
+							</li>
+							<li class="mb-3">
+								Queda estrictamente prohibido fumar dentro del recinto (incluidas las áreas
+								externas).
+								<ul class="list-alpha ml-5 list-outside text-primary-text">
+									<li class="mb-3">
+										Es imperativo respectar las indicaciones de seguridad y de protección contra
+										incendios visibles en el recinto. El CLIENTE se asegurará de dejar despejadas
+										las salidas de emergencia. No ocultará ni obstaculizará el acceso a los
+										extintores, boca de incendio equipada, detectores de humo, cuadros eléctricos,
+										etc.
+									</li>
+									<li class="mb-3">
+										Ningún objeto superará las paredes del box para prevenir así cualquier incendio
+										y garantizar el correcto funcionamiento de los dispositivos de iluminación y
+										protección contra incendios.
+									</li>
+									<li class="mb-3">
+										El CLIENTE no instalará ninguna máquina en su box y no realizará ninguna
+										operación de soldadura en el recinto.
+									</li>
+								</ul>
+							</li>
+							<li class="mb-3">
+								Para entrar y salir del recinto, el CLIENTE deberá introducir su código de acceso y
+								evitar que cualquier persona entre detrás sin haber introducido su código.
+								<ul class="list-alpha ml-5 list-outside text-primary-text">
+									<li class="mb-3">
+										El CLIENTE se asegurará de que la puerta/portón de acceso al recinto quede
+										completamente cerrada
+									</li>
+									<li class="mb-3">
+										El CLIENTE respetará las indicaciones de uso de las instalaciones y en
+										particular las de los ascensores, montacarga, etc. Los utilizará bajo su propia
+										responsabilidad y por su cuenta y riesgo.
+									</li>
+									<li class="mb-3">
+										El CLIENTE utilizará las salidas de emergencia solo en caso de urgencia. El
+										CLIENTE responderá de cualquier apertura improcedente de estas salidas (coste
+										aproximado 120 euros).
+									</li>
+									<li class="mb-3">
+										El CLIENTE se compromete a no dejar, ni siquiera temporalmente, detritus,
+										objetos o material fuera de los lugares previstos a tal efecto y responderá por
+										los gastos por almacenamiento no autorizados (coste aproximado de 50 euros por
+										objeto) y los gastos de despeje (coste aproximado de 30 euros por metro cúbido).
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</section>
+	<section class="mx-auto max-w-6xl px-4 py-6">
+		<h4 class="py-6 text-xl text-primary-title">Quinta. Garantías de cumplimiento.</h4>
+		<p class="mb-3 text-primary-text">
+			En garantía del cumplimiento de las obligaciones asumidas por el CLIENTE, entregará en
+			depósito, antes de darse inicio al contrato, una cantidad, a modo de fianza equivalente al
+			importe de una (1) mensualidad de contrato, sin IPSI, que le será devuelta en el plazo de 25
+			días desde que, finalizado el contrato, no existan obligaciones pendientes por su parte. Este
+			depósito se actualizará en cada prórroga para hacerlo equivalente al importe de la mensualidad
+			vigente en cada momento.
+		</p>
+		<p class="mb-3 text-primary-text">
+			Se acuerda expresamente que dicho depósito podrá ser aplicado por los ARRENDATARIOS hasta
+			donde alcance a la cancelación total o parcial de cualquier deuda subsistente. No pudiendo, en
+			ningún caso, el CLIENTE, pretender que se aplique al pago de la deuda.
+		</p>
+	</section>
+	<section class="mx-auto max-w-6xl px-4 py-6">
+		<h4 class="py-6 text-xl text-primary-title">Sexta. Causas de resolución.</h4>
+		<p class="mb-3 text-primary-text">
+			Las previstas en la ley, y especificamente:
+			<ul class="ml-5 list-outside list-decimal text-primary-text">
+				<li class="mb-3">
+					El incumplimiento, por el CLIENTE, de la obligación de pago de los servicios contratados
+					en la fecha acordada.
+				</li>
+				<li class="mb-3">
+					El incumplimiento reiterado de los acuerdos sobre las condiciones de uso y de acceso a los
+					servicios estipulación <a href="">CUARTA</a>.
+				</li>
+				<li class="mb-3">
+					Decisión del CLIENTE, con preaviso de cuatro (4) días naturales anteriores al inicio de un
+					nuevo periodo, dirigiendo comunicación en tal sentido a la siguiente dirección de correo
+					{COMPANY_EMAIL}. En este caso, el CLIENTE devolverá las bonificaciones y/o descuentos que
+					se hubiesen aplicado al servicio asociadas a un compromiso de duración mínima.
+				</li>
+				<li class="mb-3">
+					Decisión de los ARRENDATARIOS, con preaviso de siete (7) días naturales a que tenga
+					efecto.
+				</li>
+			</ul>
+		</p>
+	</section>
+	<section class="mx-auto max-w-6xl px-4 py-6">
+		<h4 class="py-6 text-xl text-primary-title">Séptima. Efectos de la resolución.</h4>
+		<p class="mb-3 text-primary-text">
+			Desde que exista causa de resolución, los ARRENDATARIOS PODRÁN LIMITAR EL ACCESO AL CLIENTE AL
+			EDIFICIO.
+		</p>
+		<p class="mb-3 text-primary-text">
+			Desde el día siguiente al vencimiento de una obligación de pago incumplida, su importe
+			devengará el interés moratorio previsto en la Ley 3/2004, de 29 de diciembre, de para
+			operaciones comerciales.
+		</p>
+		<p class="mb-3 text-primary-text">
+			Desde que finalice el periodo contractual que estuviese en curso al producirse la causa de
+			resolución, y en caso de no haber sido retirado el contenido del box, por el CLIENTE, se
+			devengará, además, a favor de los ARRENDATARIOS, una indemnización diaria proporcional al
+			precio mensual pactado para el uso del box contratado, hasta que se retiren, por el CLIENTE,
+			las mercancías o pertenencias que pudiesen existir almacenadas en el box, o en el lugar al que
+			hubiese sido trasladada.
+		</p>
+		<p class="mb-3 text-primary-text">
+			Desde que transcurran quince (15) días naturales tras el incumplimiento de cualquier
+			obligación que sea causa o conlleve la resolución del contrato, quedarán los ARRENDATARIOS
+			expresamente autorizados para:
+			<ul class="ml-5 list-outside list-decimal text-primary-text">
+				<li class="mb-3">
+					TRASLADAR LOS BIENES Y OBJETOS que pudiesen permanecer en el interior del box a un módulo
+					de almacenamiento o lugar que libremente designen los ARRENDATARIOS.
+				</li>
+				<li class="mb-3">
+					DESHACERSE, por cualquier medio, o ceder gratuitamente, dichos bienes u objetos, a
+					asociaciones sin ánimo de lucro.
+				</li>
+			</ul>
+		</p>
+	</section>
+	<section class="mx-auto max-w-6xl px-4 py-6">
+		<h4 class="py-6 text-xl text-primary-title">
+			Octava. Medios eficaces de comunicación entre las partes.
+		</h4>
+		<p class="mb-3 text-primary-text">
+			Ambas partes mantendrán, en todo momento, actualizados los datos relativos que, para
+			comunicaciones relativas al desarrollo y cumplimiento de este contrato, señalan a
+			continuación:
+		</p>
+		<p class="mb-3 text-primary-text">
+			Dirección postal: {COMPANY_ADDRESS}. {COMPANY_CITY}. {COMPANY_ZIP_CODE}, {COMPANY_CITY}.
+		</p>
+		<p class="mb-3 text-primary-text">Teléfonos: {COMPANY_PHONE} / {COMPANY_PHONE2}</p>
+		<p class="mb-3 text-primary-text">Correo electrónico: {COMPANY_EMAIL}</p>
+		<p class="mb-3 text-primary-text">
+			Toda comunicación meramente dirigida a cualquiera de ellos, o a aquellos otros que durante el
+			contrato hayan podido ser empleados, será eficaz para producir los efectos asociados en el
+			presente contrato a cualquier comunicación que deban hacerse las partes.
+		</p>
+	</section>
+	<section class="mx-auto max-w-6xl px-4 py-6">
+		<h4 class="py-6 text-xl text-primary-title">Novena. Cesión de derechos.</h4>
+		<p class="mb-3 text-primary-text">
+			Quedan autorizados los ARRENDATARIOS durante toda la vigencia del contrato, a ceder y
+			transmitir libremente su posición contractual, directamente, o por efecto de cualquier
+			operación mercantil o societaria, que implique cambio de titularidad, manteniendo el contrato
+			su vigencia y términos.
+		</p>
+	</section>
+	<section class="mx-auto max-w-6xl px-4 py-6">
+		<h4 class="py-6 text-xl text-primary-title">Décima. Ordenamiento aplicable y fuero.</h4>
+		<p class="mb-3 text-primary-text">
+			Al presente contrato le es de aplicación el ordenamiento jurídico español, y para la
+			aplicación del mismo, en caso de discrepancias, se someten ambas partes a la jurisdicción de
+			los Tribunales de {COMPANY_CITY}.
+		</p>
+	</section>
+	<section class="mx-auto max-w-6xl px-4 py-6">
+		<h4 class="py-6 text-xl text-primary-title">Undécima. Protección de datos.</h4>
+		<p class="mb-3 text-primary-text">
+			Los datos de carácter personal facilitados serán tratados por {COMPANY_REPRESENTATIVE2}, con
+			NIF {COMPANY_TAX_ID2}, y/o {COMPANY_REPRESENTATIVE}, con NIF {COMPANY_TAX_ID}, de acuerdo con
+			lo dispuesto en el Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo, de 27 de
+			abril de 2016, relativo a la protección de las personas físicas en lo que respecta al
+			tratamiento de datos personales y a la libre circulación de los mismos, y a la Ley Orgánica
+			3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos
+			digitales.
+		</p>
+		<p class="mb-3 text-primary-text">
+			os datos facilitados serán tratados por el tiempo necesario para el cumplimiento de las
+			finalidades objeto de tratamiento, mientras no se oponga al mismo y por el tiempo necesario
+			para el cumplimiento de las obligaciones legales del responsable.
+		</p>
+		<p class="mb-3 text-primary-text">
+			Los datos no serán cedidos ni comunicados a terceros, salvo en los supuestos legalmente
+			establecidos.
+		</p>
+		<p class="mb-3 text-primary-text">
+			Le recordamos que tiene derecho a ejercer los derechos de acceso, rectificación, cancelación,
+			limitación, oposición y portabilidad de manera gratuita mediante correo electrónico a:
+			{COMPANY_EMAIL} o bien en la siguiente dirección: {COMPANY_ADDRESS}, {COMPANY_ZIP_CODE} - {
+				COMPANY_CITY
+			} ({COMPANY_CITY}) y de solicitar la tutela de la Agencia Española de Protección de datos en
+			www.aepd.es.
+		</p>
+		<p class="mb-3 text-primary-text">
+			El CLIENTE es informado y acepta que el centro dispone de cámaras de vídeo vigilancia sujetos
+			a la autorización y la declaración exigida para su instalación. El CLIENTE autoriza, a su vez,
+			el uso de tales dispositivos con la finalidad de garantizar la seguridad de los bienes
+			depositados en las instalaciones de referencia.
+		</p>
+		<p class="mb-3 text-primary-text">
+			El tratamiento de datos resulta necesario para garantizar la seguridad de todas aquellas
+			personas que se encuentren en las instalaciones. De igual forma, garantizar la seguridad de
+			éstas y sus materiales supone una labor necesaria para asegurar el correcto y adecuado
+			servicio de especial relevancia social como es el prestado por los ARRENDATARIOS.
+		</p>
+		<p class="mb-3 text-primary-text">
+			Si desea ejercer el derecho de acceso, rectificación, supresión y oposición, limitación del
+			tratamiento, portabilidad de datos, y a no ser objeto de decisiones individualizadas
+			automatizadas, dirija una comunicación por cualquiera de los medios anteriormente referidos.
+		</p>
+	</section>
+</Layout>
