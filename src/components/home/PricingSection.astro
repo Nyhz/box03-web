@@ -2,19 +2,7 @@
 import PricingCard from '../home/components/PricingCard.astro'
 
 const pricing = [
-	{
-		name: 'Compacto',
-		description: 'Maximiza tu espacio en casa. Almacena documentos, cajas y objetos personales.',
-		periodicity: '/mes',
-		price: '100€',
-		available: true,
-		features: [
-			'Hasta 5m²',
-			'Acceso las 24 horas, todos los días',
-			'caracteristica3',
-			'caracteristica4'
-		]
-	},
+
 	{
 		name: 'Estándar',
 		description:
@@ -49,7 +37,7 @@ const pricing = [
 
 <section id="trasteros" class="mx-auto max-w-6xl px-4 py-16">
 	<h3 class="text-4xl text-primary-title">Selecciona una categoría</h3>
-	<div class="mt-16 flex flex-col gap-8 md:flex-row">
+	<div class="mt-16 flex flex-col gap-20 md:flex-row">
 		{pricing.map((item) => <PricingCard {...item} />)}
 	</div>
 </section>
