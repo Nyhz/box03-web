@@ -2,35 +2,27 @@
 import PricingCard from '../home/components/PricingCard.astro'
 
 const pricing = [
-
 	{
 		name: 'Estándar',
-		description:
-			'No renuncies a tus hobbies. Guarda tus herramientas, bicicletas, esquís y todo lo que necesites.',
+		description: 'Hasta 3,5m² de almacenamiento',
 		isFlagged: true,
 		periodicity: '/mes',
-		price: '150€',
+		price: '65€',
 		available: true,
 		features: [
-			'Hasta 10m²',
-			'Acceso las 24 horas, todos los días',
-			'caracteristica3',
-			'caracteristica4'
+			'Bicicletas y equipo de ciclismo',
+			'Herramientas y equipos de bricolaje',
+			'Cajas de almacenamiento y archivos',
+			'Instrumentos musicales'
 		]
 	},
 	{
 		name: 'Premium',
-		description:
-			'Volumen excepcional. La elección idónea para enseres de gran tamaño y mobiliario.',
+		description: 'Más de 14m² de almacenamiento',
 		periodicity: '/mes',
-		price: '200€',
+		price: '120€',
 		available: false,
-		features: [
-			'Más de 12m²',
-			'Acceso las 24 horas, todos los días',
-			'caracteristica3',
-			'caracteristica4'
-		]
+		features: ['Muebles', 'Equipamiento de oficina', 'Enseres de mudanza', 'Atrezzo, decorados escénicos']
 	}
 ]
 ---
