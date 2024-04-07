@@ -1,21 +1,28 @@
 ---
 import ServiceCard from './components/ServiceCard.astro'
+import AccessIcon from '../icons/AccessIcon.astro'
+import SecurityIcon from '../icons/SecurityIcon.astro'
+import CalendarIcon from '../icons/CalendarIcon.astro'
+
 
 const services = [
 	{
 		title: 'Acceso',
 		description:
-			'Acceso flexible los 7 días de la semana. Disfruta de la libertad de acceder a tus pertenencias cuando lo necesites.'
+			'Acceso flexible los 7 días de la semana. Disfruta de la libertad de acceder a tus pertenencias cuando lo necesites.',
+		icon: AccessIcon
 	},
 	{
 		title: 'Seguridad',
 		description:
-			'Trasteros privados y discretos que aseguran la confidencialidad y seguridad de tus pertenencias.'
+			'Trasteros privados y discretos que aseguran la confidencialidad y seguridad de tus pertenencias.',
+		icon: SecurityIcon
 	},
 	{
 		title: 'Flexibilidad',
 		description:
-			'Opciones de alquiler a partir de un mes de duración, ofreciendo soluciones que se adaptan a tus necesidades.'
+			'Opciones de alquiler a partir de un mes de duración, ofreciendo soluciones que se adaptan a tus necesidades.',
+		icon: CalendarIcon
 	}
 ]
 ---
@@ -29,6 +36,7 @@ const services = [
 					serviceNo={index + 1}
 					title={service.title}
 					description={service.description}
+					icon={service.icon}
 				/>
 			))
 		}

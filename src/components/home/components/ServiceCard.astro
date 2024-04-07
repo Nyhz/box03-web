@@ -1,16 +1,16 @@
 ---
-const { serviceNo, title, description } = Astro.props
+const { serviceNo, title, description, icon: Icon } = Astro.props
 ---
 
 <div
 	id={`service-${serviceNo}`}
-	class='flex flex-col gap-12 rounded-3xl bg-primary-bg-component px-6
-  py-8 border-2 border-transparent hover:border-primary-accent transition-all hover:scale-[105%]'
+	class="flex flex-col gap-12 rounded-3xl border-2 border-transparent
+  bg-primary-bg-component px-6 py-8 transition-all hover:scale-[105%] hover:border-primary-accent"
 >
-	<span class='text-primary-title'>0{serviceNo}</span>
-	<div class='duration-250 flex flex-col gap-y-4'>
-		<h4 class='text-xl text-primary-title'>{title}</h4>
-		<p class='text-primary-text'>
+	<div class="duration-250 flex flex-col gap-y-4">
+		<Icon/>
+		<h4 class="text-xl text-primary-title">{title}</h4>
+		<p class="text-primary-text">
 			{description}
 		</p>
 	</div>
