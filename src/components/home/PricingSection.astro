@@ -21,7 +21,7 @@ const pricing = [
 		description: 'Más de 14m² de almacenamiento',
 		periodicity: '/mes',
 		price: '120€',
-		available: false,
+		available: true,
 		features: [
 			'Muebles',
 			'Equipamiento de oficina',
@@ -32,9 +32,9 @@ const pricing = [
 ]
 ---
 
-<section id="trasteros" class="mx-auto max-w-6xl px-4 py-16">
-	<h3 class="text-4xl text-primary-title">Selecciona una categoría</h3>
-	<div class="mt-16 flex flex-col gap-20 md:flex-row md:justify-center">
+<section id='trasteros' class='mx-auto max-w-6xl px-4 py-16'>
+	<h3 class='text-4xl text-primary-title'>Selecciona una categoría</h3>
+	<div class='mt-16 flex flex-col gap-20 md:flex-row md:justify-center'>
 		{pricing.map((item) => <PricingCard {...item} />)}
 	</div>
 </section>

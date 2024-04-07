@@ -21,7 +21,7 @@ if (Astro.request.method === 'POST') {
 			\n\n
 			Email: ${email}
 			\n\n
-			Teléfono: ${phone}
+			Teléfono: ${phone}gi
 			`
 		}
 		await sendGrid
@@ -72,7 +72,13 @@ if (Astro.request.method === 'POST') {
 		>Hola! Estoy interesad@ en alquilar un trastero. Os envío mis datos de contacto!</textarea
 	>
 	<div>
-		<input class='accent' type='checkbox' id='terms' name='terms' required='true' />
+		<input
+			class='bg-red accent-primary-accent'
+			type='checkbox'
+			id='terms'
+			name='terms'
+			required='true'
+		/>
 		<label class='ml-1' for='terms'>
 			<span class='text-primary-text'>He leído y acepto la</span>
 			<a href='/politica-de-privacidad' class='text-primary-accent'>política de privacidad</a>
