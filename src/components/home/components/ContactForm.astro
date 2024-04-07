@@ -17,6 +17,8 @@ if (Astro.request.method === 'POST') {
 			subject: `Contacto de ${name} - Teléfono: ${phone}`,
 			text: `${message}
 			\n\n
+			Nombre: ${name}
+			\n\n
 			Email: ${email}
 			\n\n
 			Teléfono: ${phone}
