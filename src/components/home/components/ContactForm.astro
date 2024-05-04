@@ -3,10 +3,11 @@ import sendGrid from '@sendgrid/mail'
 sendGrid.setApiKey(import.meta.env.SENDGRID_API_KEY)
 
 function isContentSafe(input: string): boolean {
-	const dangerousPatterns =
-		/<script.*?>.*?<\/script>|<.*?(javascript|data|vbscript):.*?>|<.*?(onmouseover|onerror|onload)=.*?>|([';])+|(--)+|(http:\/\/|https:\/\/|www\.)/gi
 	const maxChars = 200
-	return !dangerousPatterns.test(input) && input.length <= maxChars
+	const dangerousPatterns =
+		/http|https|www|\.com|\.es|<|>|\b(script|href|src|style|onerror|onload|eval|alert|iframe|input)\b/gi
+	return !dangerousPatterns.test(input)
+	&& input.length <= maxChars
 }
 
 if (Astro.request.method === 'POST') {
@@ -16,12 +17,8 @@ if (Astro.request.method === 'POST') {
 		const email = data.get('email') as string
 		const phone = data.get('phone') as string
 		const message = data.get('message') as string
-		if (
-			isContentSafe(name) &&
-			isContentSafe(email) &&
-			isContentSafe(phone) &&
-			isContentSafe(message)
-		) {
+		if (isContentSafe(message)) {
+			console.log('Sending email')
 			const msg = {
 				to: 'gestionbox03@gmail.com',
 				from: 'gestionbox03@gmail.com',
@@ -29,17 +26,16 @@ if (Astro.request.method === 'POST') {
 				subject: `Contacto de ${name} - Teléfono: ${phone}`,
 				text: `${message}
 			\n\n
-			Nombre: ${name}
+			Nombre: ${name} 
 			\n\n
 			Email: ${email}
 			\n\n
 			Teléfono: ${phone}
 			`
 			}
+
 			await sendGrid
-
 				.send(msg)
-
 				.then(() => {
 					console.log('Email sent')
 				})
@@ -47,9 +43,10 @@ if (Astro.request.method === 'POST') {
 					console.error(error)
 				})
 		} else {
-			console.error('Content is not safe')
+			console.log('Content not safe')
 		}
 	} catch (error) {
+		console.log('Error sending email')
 		console.error(error)
 	}
 }
