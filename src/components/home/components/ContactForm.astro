@@ -3,11 +3,9 @@ import sendGrid from '@sendgrid/mail'
 sendGrid.setApiKey(import.meta.env.SENDGRID_API_KEY)
 
 function isContentSafe(input: string): boolean {
-	const maxChars = 200
 	const dangerousPatterns =
 		/http|https|www|\.com|\.es|<|>|\b(script|href|src|style|onerror|onload|eval|alert|iframe|input)\b/gi
 	return !dangerousPatterns.test(input)
-	&& input.length <= maxChars
 }
 
 if (Astro.request.method === 'POST') {
@@ -58,6 +56,7 @@ if (Astro.request.method === 'POST') {
 		autocomplete="off"
 		placeholder="Nombre"
 		type="text"
+		maxlength="30"
 		name="name"
 		required
 	/>
@@ -74,6 +73,7 @@ if (Astro.request.method === 'POST') {
 		class="block w-full appearance-none rounded-md border-0 bg-transparent px-4 py-4 text-base text-primary-title-hovered outline-none ring-1 ring-primary-title-hovered transition placeholder:text-primary-text hover:ring-primary-accent focus:outline-none focus:ring-2 focus:ring-primary-accent"
 		placeholder="Teléfono"
 		autocomplete="off"
+		maxlength="16"
 		type="tel"
 		name="phone"
 	/>
@@ -82,6 +82,7 @@ if (Astro.request.method === 'POST') {
 		placeholder="Mensaje"
 		autocomplete="off"
 		name="message"
+		maxlength="250"
 		required
 		>Hola! Estoy interesad@ en alquilar un trastero. Os envío mis datos de contacto!</textarea
 	>
