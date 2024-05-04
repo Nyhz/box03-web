@@ -16,7 +16,6 @@ if (Astro.request.method === 'POST') {
 		const phone = data.get('phone') as string
 		const message = data.get('message') as string
 		if (isContentSafe(message)) {
-			console.log('Sending email')
 			const msg = {
 				to: 'gestionbox03@gmail.com',
 				from: 'gestionbox03@gmail.com',
