@@ -2,6 +2,12 @@
 import sendGrid from '@sendgrid/mail'
 sendGrid.setApiKey(import.meta.env.SENDGRID_API_KEY)
 
+function isContentSafe(input: string): boolean {
+	const dangerousPatterns =
+		/http|https|www|\.com|\.es|<|>|\b(script|href|src|style|onerror|onload|eval|alert|iframe|input)\b/gi
+	return !dangerousPatterns.test(input)
+}
+
 if (Astro.request.method === 'POST') {
 	try {
 		const data = await Astro.request.formData()
@@ -9,83 +15,88 @@ if (Astro.request.method === 'POST') {
 		const email = data.get('email') as string
 		const phone = data.get('phone') as string
 		const message = data.get('message') as string
-
-		const msg = {
-			to: 'gestionbox03@gmail.com',
-			from: 'gestionbox03@gmail.com',
-			replyTo: { email: email, name: name },
-			subject: `Contacto de ${name} - Teléfono: ${phone}`,
-			text: `${message}
+		if (isContentSafe(message)) {
+			const msg = {
+				to: 'gestionbox03@gmail.com',
+				from: 'gestionbox03@gmail.com',
+				replyTo: { email: email, name: name },
+				subject: `Contacto de ${name} - Teléfono: ${phone}`,
+				text: `${message}
 			\n\n
-			Nombre: ${name}
+			Nombre: ${name} 
 			\n\n
 			Email: ${email}
 			\n\n
-			Teléfono: ${phone}gi
+			Teléfono: ${phone}
 			`
+			}
+
+			await sendGrid
+				.send(msg)
+				.then(() => {
+					console.log('Email sent')
+				})
+				.catch((error) => {
+					console.error(error)
+				})
 		}
-		await sendGrid
-			.send(msg)
-			.then(() => {
-				console.log('Email sent')
-			})
-			.catch((error) => {
-				console.error(error)
-			})
 	} catch (error) {
 		console.error(error)
 	}
 }
 ---
 
-<form class='flex w-full flex-col gap-4 py-4' method='POST' data-astro-reload>
+<form class="flex w-full flex-col gap-4 py-4" method="POST" data-astro-reload>
 	<input
-		class='block w-full appearance-none rounded-md border-0 bg-transparent px-4 py-4 text-base text-primary-title-hovered outline-none ring-1 ring-primary-title-hovered transition placeholder:text-primary-text hover:ring-primary-accent focus:outline-none focus:ring-2 focus:ring-primary-accent'
-		autocomplete='off'
-		placeholder='Nombre'
-		type='text'
-		name='name'
+		class="block w-full appearance-none rounded-md border-0 bg-transparent px-4 py-4 text-base text-primary-title-hovered outline-none ring-1 ring-primary-title-hovered transition placeholder:text-primary-text hover:ring-primary-accent focus:outline-none focus:ring-2 focus:ring-primary-accent"
+		autocomplete="off"
+		placeholder="Nombre"
+		type="text"
+		maxlength="30"
+		name="name"
 		required
 	/>
 
 	<input
-		class='block w-full appearance-none rounded-md border-0 bg-transparent px-4 py-4 text-base text-primary-title-hovered outline-none ring-1 ring-primary-title-hovered transition placeholder:text-primary-text hover:ring-primary-accent focus:outline-none focus:ring-2 focus:ring-primary-accent'
-		placeholder='Email'
-		autocomplete='off'
-		type='email'
-		name='email'
+		class="block w-full appearance-none rounded-md border-0 bg-transparent px-4 py-4 text-base text-primary-title-hovered outline-none ring-1 ring-primary-title-hovered transition placeholder:text-primary-text hover:ring-primary-accent focus:outline-none focus:ring-2 focus:ring-primary-accent"
+		placeholder="Email"
+		autocomplete="off"
+		type="email"
+		name="email"
 		required
 	/>
 	<input
-		class='block w-full appearance-none rounded-md border-0 bg-transparent px-4 py-4 text-base text-primary-title-hovered outline-none ring-1 ring-primary-title-hovered transition placeholder:text-primary-text hover:ring-primary-accent focus:outline-none focus:ring-2 focus:ring-primary-accent'
-		placeholder='Teléfono'
-		autocomplete='off'
-		type='tel'
-		name='phone'
+		class="block w-full appearance-none rounded-md border-0 bg-transparent px-4 py-4 text-base text-primary-title-hovered outline-none ring-1 ring-primary-title-hovered transition placeholder:text-primary-text hover:ring-primary-accent focus:outline-none focus:ring-2 focus:ring-primary-accent"
+		placeholder="Teléfono"
+		autocomplete="off"
+		maxlength="16"
+		type="tel"
+		name="phone"
 	/>
 	<textarea
-		class='block w-full appearance-none rounded-md border-0 bg-transparent px-4 py-4 text-base text-primary-title-hovered outline-none ring-1 ring-primary-title-hovered transition placeholder:text-primary-text hover:ring-primary-accent focus:outline-none focus:ring-2 focus:ring-primary-accent'
-		placeholder='Mensaje'
-		autocomplete='off'
-		name='message'
+		class="block w-full appearance-none rounded-md border-0 bg-transparent px-4 py-4 text-base text-primary-title-hovered outline-none ring-1 ring-primary-title-hovered transition placeholder:text-primary-text hover:ring-primary-accent focus:outline-none focus:ring-2 focus:ring-primary-accent"
+		placeholder="Mensaje"
+		autocomplete="off"
+		name="message"
+		maxlength="250"
 		required
 		>Hola! Estoy interesad@ en alquilar un trastero. Os envío mis datos de contacto!</textarea
 	>
 	<div>
 		<input
-			class='bg-red accent-primary-accent'
-			type='checkbox'
-			id='terms'
-			name='terms'
-			required='true'
+			class="bg-red accent-primary-accent"
+			type="checkbox"
+			id="terms"
+			name="terms"
+			required="true"
 		/>
-		<label class='ml-1' for='terms'>
-			<span class='text-primary-text'>He leído y acepto la</span>
-			<a href='/politica-de-privacidad' class='text-primary-accent'>política de privacidad</a>
+		<label class="ml-1" for="terms">
+			<span class="text-primary-text">He leído y acepto la</span>
+			<a href="/politica-de-privacidad" class="text-primary-accent">política de privacidad</a>
 		</label>
 	</div>
 	<button
-		class='duration-250 mt-4 flex w-fit cursor-pointer rounded-full bg-primary-text px-6 py-3 text-primary-text-inverse transition-all hover:bg-primary-title-hovered disabled:cursor-default disabled:opacity-25 disabled:hover:bg-primary-text'
+		class="duration-250 mt-4 flex w-fit cursor-pointer rounded-full bg-primary-text px-6 py-3 text-primary-text-inverse transition-all hover:bg-primary-title-hovered disabled:cursor-default disabled:opacity-25 disabled:hover:bg-primary-text"
 		>Enviar</button
 	>
 </form>
