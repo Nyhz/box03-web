@@ -40,11 +40,8 @@ if (Astro.request.method === 'POST') {
 				.catch((error) => {
 					console.error(error)
 				})
-		} else {
-			console.log('Content not safe')
 		}
 	} catch (error) {
-		console.log('Error sending email')
 		console.error(error)
 	}
 }
