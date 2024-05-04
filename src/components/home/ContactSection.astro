@@ -3,49 +3,58 @@ import ContactForm from './components/ContactForm.astro'
 import AddressIcon from '../icons/AddressIcon.astro'
 import PhoneIcon from '../icons/PhoneIcon.astro'
 import EmailIcon from '../icons/EmailIcon.astro'
+
+const COMPANY_EMAIL = 'gestionbox03@gmail.com'
+const COMPANY_PHONE = '613 360 034'
+const COMPANY_PHONE_LINK = '+34613360034'
 ---
 
-<section id='seccion-contacto' class='mx-auto max-w-6xl px-4 py-16'>
-	<h3 id='contact-title' class='text-4xl text-primary-title'>Contacto</h3>
-	<div class='md:gap-6-0 my-12 mb-24 flex flex-col gap-x-6 gap-y-6 md:flex-row'>
-		<div
-			id='info-card-1'
-			class='flex w-full flex-col gap-12 rounded-3xl border-2 border-transparent bg-primary-bg-component px-6 py-8 transition-all hover:scale-[105%] hover:border-primary-accent'
+<section id="seccion-contacto" class="mx-auto max-w-6xl px-4 py-16">
+	<h3 id="contact-title" class="text-4xl text-primary-title">Contacto</h3>
+	<div class="md:gap-6-0 my-12 mb-24 flex flex-col gap-x-6 gap-y-6 md:flex-row">
+		<a
+			href="https://maps.app.goo.gl/EFBsJuvRm8A3ww71A"
+			target="_blank"
+			id="info-card-1"
+			class="flex w-full flex-col gap-12 rounded-3xl border-2 border-transparent bg-primary-bg-component px-6 py-8 transition-all hover:scale-[105%] hover:border-primary-accent"
 		>
 			<AddressIcon />
-			<div class='flex flex-col gap-y-4'>
-				<p class='duration-250 text-primary-title'>Calle Sargento Mena, 10</p>
-				<p class='duration-250 text-primary-text'>Ceuta</p>
+			<div class="flex flex-col gap-y-4">
+				<p class="duration-250 text-primary-title">Calle Sargento Mena, 10</p>
+				<p class="duration-250 text-primary-text">Ceuta</p>
 			</div>
-		</div>
-		<div
-			id='info-card-2'
-			class='flex w-full flex-col gap-12 rounded-3xl border-2 border-transparent bg-primary-bg-component px-6 py-8 transition-all hover:scale-[105%] hover:border-primary-accent'
+		</a>
+		<a
+			href=`tel:${COMPANY_PHONE_LINK}`
+			id="info-card-2"
+			class="flex w-full flex-col gap-12 rounded-3xl border-2 border-transparent bg-primary-bg-component px-6 py-8 transition-all hover:scale-[105%] hover:border-primary-accent"
 		>
 			<PhoneIcon />
-			<div class='flex flex-col gap-y-4'>
-				<p class='duration-250 text-primary-title'>+34 613 360 034</p>
+			<div class="flex flex-col gap-y-4">
+				<p class="duration-250 text-primary-title">+34 {COMPANY_PHONE}</p>
 			</div>
-		</div>
-		<div
-			id='info-card-3'
-			class='flex w-full flex-col gap-12 rounded-3xl border-2 border-transparent bg-primary-bg-component px-6 py-8 transition-all hover:scale-[105%] hover:border-primary-accent'
+		</a>
+		<a
+			href=`mailto:${COMPANY_EMAIL}`
+			target="_blank"
+			id="info-card-3"
+			class="flex w-full flex-col gap-12 rounded-3xl border-2 border-transparent bg-primary-bg-component px-6 py-8 transition-all hover:scale-[105%] hover:border-primary-accent"
 		>
 			<EmailIcon />
-			<div class='flex flex-col gap-y-4'>
-				<p class='duration-250 text-primary-title'>gestionbox03@gmail.com</p>
+			<div class="flex flex-col gap-y-4">
+				<p class="duration-250 text-primary-title">{COMPANY_EMAIL}</p>
 			</div>
-		</div>
+		</a>
 	</div>
 
-	<div class='mt-6 flex flex-col gap-x-12 gap-y-10 md:flex-row'>
-		<div class='flex w-full flex-col md:w-1/2'>
-			<h4 class='text-4xl text-primary-title'>Ampliemos tu espacio juntos</h4>
-			<p class='mt-4 w-full text-lg leading-6 text-primary-text md:w-[85%]'>
+	<div class="mt-6 flex flex-col gap-x-12 gap-y-10 md:flex-row">
+		<div class="flex w-full flex-col md:w-1/2">
+			<h4 class="text-4xl text-primary-title">Ampliemos tu espacio juntos</h4>
+			<p class="mt-4 w-full text-lg leading-6 text-primary-text md:w-[85%]">
 				Escríbenos y te ayudaremos a encontrar la solución que mejor se adapte a tus necesidades.
 			</p>
 		</div>
-		<div class='md:w-1/2'>
+		<div class="md:w-1/2">
 			<ContactForm />
 		</div>
 	</div>
