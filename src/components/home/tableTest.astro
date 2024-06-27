@@ -1,68 +1,229 @@
 ---
+import Box from './components/Box.astro'
+
 const storages = [
-	{ id: 'box01', surface: 3.55, height: '3.29', volume: 11.68, price: '144.84 €', available: true },
 	{
-		id: 'box02',
-		surface: 2.06,
-		height: '2,53-1,83',
-		volume: 4.16,
+		id: '1',
+		name: 'box 01',
+		surface: '3.55 m²',
+		height: '3.29 m',
+		volume: '1.68 m³',
+		price: '144.84 €',
+		available: true
+	},
+	{
+		id: '2',
+		name: 'box 02',
+		surface: '2.06 m²',
+		height: 'max: 2.53 m, min: 1.83 m',
+		volume: '4.16 m³',
 		price: '84.05 €',
 		available: true
 	},
-	{ id: 'box03', surface: 1.97, height: '2.53', volume: 4.98, price: '80.38 €', available: true },
-	{ id: 'box04', surface: 2.07, height: '2.53', volume: 5.24, price: '84.46 €', available: true },
-	{ id: 'box05', surface: 2.84, height: '2.53', volume: 7.19, price: '115.87 €', available: true },
-	{ id: 'box06', surface: 3.16, height: '2.53', volume: 7.99, price: '128.93 €', available: true },
-	{ id: 'box07', surface: 2.35, height: '2.53', volume: 5.95, price: '95.88 €', available: true },
-	{ id: 'box08', surface: 2.46, height: '2.53', volume: 6.22, price: '100.37 €', available: true },
-	{ id: 'box09', surface: 2.21, height: '2.53', volume: 5.59, price: '90.17 €', available: true },
-	{ id: 'box10', surface: 2.25, height: '2.53', volume: 5.69, price: '91.80 €', available: true },
-	{ id: 'box11', surface: 2.31, height: '2.53', volume: 5.84, price: '94.25 €', available: true },
-	{ id: 'box12', surface: 2.31, height: '2.53', volume: 5.84, price: '94.25 €', available: true },
-	{ id: 'box13', surface: 2.94, height: '2.53', volume: 7.44, price: '119.95 €', available: true },
-	{ id: 'box14', surface: 2.93, height: '2.53', volume: 7.41, price: '119.54 €', available: true },
-	{ id: 'box15', surface: 2.09, height: '2.53', volume: 5.29, price: '85.27 €', available: true },
-	{ id: 'box16', surface: 2.25, height: '2.53', volume: 5.69, price: '91.80 €', available: true },
-	{ id: 'box17', surface: 2.25, height: '2.53', volume: 5.69, price: '91.80 €', vailable: true },
-	{ id: 'box18', surface: 2.11, height: '2.53', volume: 5.34, price: '86.09 €', vailable: true },
 	{
-		id: 'box19',
-		surface: 14.87,
-		height: '2,53-1,84-1,50',
-		volume: 26.26,
-		price: '606.70 €',
-		vailable: true
+		id: '3',
+		name: 'box 03',
+		surface: '1.97 m²',
+		height: '2.53 m',
+		volume: '4.98 m³',
+		price: '80.38 €',
+		available: true
 	},
-	{ id: 'box20', surface: 3.58, height: '2.53', volume: 9.06, price: '146.06 €', vailable: true },
-	{ id: 'box21', surface: 2.42, height: '2.53', volume: 6.12, price: '98.74 €', vailable: true }
+	{
+		id: '4',
+		name: 'box 04',
+		surface: '2.07 m²',
+		height: '2.53 m',
+		volume: '5.24 m³',
+		price: '84.46 €',
+		available: true
+	},
+	{
+		id: '5',
+		name: 'box 05',
+		surface: '2.84 m²',
+		height: '2.53 m',
+		volume: '7.19 m³',
+		price: '115.87 €',
+		available: true
+	},
+	{
+		id: '6',
+		name: 'box 06',
+		surface: '3.16 m²',
+		height: '2.53 m',
+		volume: '7.99 m³',
+		price: '128.93 €',
+		available: true
+	},
+	{
+		id: '7',
+		name: 'box 07',
+		surface: '2.35 m²',
+		height: '2.53 m',
+		volume: '5.95 m³',
+		price: '95.88 €',
+		available: true
+	},
+	{
+		id: '8',
+		name: 'box 08',
+		surface: '2.46 m²',
+		height: '2.53 m',
+		volume: '6.22 m³',
+		price: '100.37 €',
+		available: true
+	},
+	{
+		id: '9',
+		name: 'box 09',
+		surface: '2.21 m²',
+		height: '2.53 m',
+		volume: '5.59 m³',
+		price: '90.17 €',
+		available: true
+	},
+	{
+		id: '10',
+		name: 'box 10',
+		surface: '2.25 m²',
+		height: '2.53 m',
+		volume: '5.69 m³',
+		price: '91.80 €',
+		available: true
+	},
+	{
+		id: '11',
+		name: 'box 11',
+		surface: '2.31 m²',
+		height: '2.53 m',
+		volume: '5.84 m³',
+		price: '94.25 €',
+		available: true
+	},
+	{
+		id: '12',
+		name: 'box 12',
+		surface: '2.31 m²',
+		height: '2.53 m',
+		volume: '5.84 m³',
+		price: '94.25 €',
+		available: true
+	},
+	{
+		id: '13',
+		name: 'box 13',
+		surface: '2.94 m²',
+		height: '2.53 m',
+		volume: '7.44 m³',
+		price: '119.95 €',
+		available: true
+	},
+	{
+		id: '14',
+		name: 'box 14',
+		surface: '2.93 m²',
+		height: '2.53 m',
+		volume: '7.41 m³',
+		price: '119.54 €',
+		available: true
+	},
+	{
+		id: '15',
+		name: 'box 15',
+		surface: '2.09 m²',
+		height: '2.53 m',
+		volume: '5.29 m³',
+		price: '85.27 €',
+		available: true
+	},
+	{
+		id: '16',
+		name: 'box 16',
+		surface: '2.25 m²',
+		height: '2.53 m',
+		volume: '5.69 m³',
+		price: '91.80 €',
+		available: true
+	},
+	{
+		id: '17',
+		name: 'box 17',
+		surface: '2.25 m²',
+		height: '2.53 m',
+		volume: '5.69 m³',
+		price: '91.80 € m',
+		available: true
+	},
+	{
+		id: '18',
+		name: 'box 18',
+		surface: '2.11 m²',
+		height: '2.53 m',
+		volume: '5.34 m³',
+		price: '86.09 € m',
+		available: true
+	},
+	{
+		id: '19',
+		name: 'box 19',
+		surface: '14.87 m²',
+		height: 'max: 2.53 m, min: 1.50 m',
+		volume: '26.26 m³',
+		price: '606.70 €',
+		available: true
+	},
+	{
+		id: '20',
+		name: 'box 20',
+		surface: '3.58 m²',
+		height: '2.53 m',
+		volume: '9.06 m³',
+		price: '146.06 €',
+		available: true
+	},
+	{
+		id: '21',
+		name: 'box 21',
+		surface: '2.42 m²',
+		height: '2.53 m',
+		volume: '6.12 m³',
+		price: '98.74 €',
+		available: true
+	}
 ]
 ---
 
 <section class="mx-auto max-w-6xl px-4 py-8 md:py-16">
 	<div class="overflow-x-auto px-2">
 		<h3 class="mb-6 text-4xl text-primary-title">Nuestros trasteros</h3>
-		<table class="w-full border-collapse border border-gray-300 text-primary-text">
+		<table class="w-full border-collapse border border-transparent text-primary-text">
 			<thead>
-				<tr class="bg-primary-bg-component">
-					<th class="border border-gray-300 px-4 py-2">Trastero</th>
-					<th class="border border-gray-300 px-4 py-2">Superficie</th>
-					<th class="border border-gray-300 px-4 py-2">Altura</th>
-					<th class="border border-gray-300 px-4 py-2">Volumen</th>
-					<th class="border border-gray-300 px-4 py-2">Precio/mes</th>
+				<tr>
+					<th
+						class="w-1/6 border border-transparent px-4 py-2 text-center align-middle text-primary-accent"
+						>Trastero</th
+					>
+					<th
+						class="w-1/6 border border-transparent px-4 py-2 text-center align-middle text-primary-accent"
+						>Superficie</th
+					>
+					<th
+						class="w-1/6 border border-transparent px-4 py-2 text-center align-middle text-primary-accent"
+						>Altura</th
+					>
+					<th
+						class="w-1/6 border border-transparent px-4 py-2 text-center align-middle text-primary-accent"
+						>Volumen</th
+					>
+					<th
+						class="w-1/6 border border-transparent px-4 py-2 text-center align-middle text-primary-accent"
+						>Precio/mes</th
+					>
 				</tr>
 			</thead>
 			<tbody>
-				{
-					storages.map((storage) => (
-						<tr>
-							<td class="border border-gray-300 px-4 py-2">{storage.id}</td>
-							<td class="border border-gray-300 px-4 py-2">{storage.surface}</td>
-							<td class="border border-gray-300 px-4 py-2">{storage.height}</td>
-							<td class="border border-gray-300 px-4 py-2">{storage.volume}</td>
-							<td class="border border-gray-300 px-4 py-2">{storage.price}</td>
-						</tr>
-					))
-				}
+				{storages.map((box) => <Box {...box} />)}
 			</tbody>
 		</table>
 	</div>

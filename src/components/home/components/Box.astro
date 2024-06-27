@@ -1,0 +1,39 @@
+---
+interface IStoragesProps {
+	id: number
+	name: string
+	surface: string
+	height: string
+	volume: string
+	price: string
+	available: boolean
+}
+
+const { id, name, surface, height, volume, price, available } = Astro.props as IStoragesProps
+---
+
+<tr class={id % 2 === 1 ? 'bg-primary-bg-component' : 'bg-transparent'}>
+	<td class="w-1/6 border border-transparent px-4 py-2 text-center align-middle">
+		{name}
+	</td>
+	<td class="w-1/6 border border-transparent px-4 py-2 text-center align-middle">
+		{surface}
+	</td>
+	<td class="w-1/6 border border-transparent px-4 py-2 text-center align-middle">
+		{height}
+	</td>
+	<td class="w-1/6 border border-transparent px-4 py-2 text-center align-middle">
+		{volume}
+	</td>
+	<td class="w-1/6 border border-transparent px-4 py-2 text-center align-middle">
+		{price}{' '}
+	</td>
+	<td class="w-1/6 border border-transparent px-4 py-2 text-center align-middle">
+		<a
+			href="#seccion-contacto"
+			class="contact-button duration-250 mt-2 cursor-pointer rounded-full bg-primary-text px-4 py-1 text-center text-primary-text-inverse transition-all hover:bg-primary-title-hovered disabled:cursor-default disabled:opacity-25 disabled:hover:bg-primary-text"
+		>
+			{available ? 'Reservar' : 'Agotado'}
+		</a>
+	</td>
+</tr>
