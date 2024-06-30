@@ -57,7 +57,7 @@ import TableTest from './tableTest.astro'
 		// Close modal when clicking on a link inside the modal
 		document.querySelectorAll('.contact-button').forEach((button) => {
 			button.addEventListener('click', (e) => {
-				const boxName = (e.target as HTMLElement).getAttribute('data-box-name')
+				const boxName = (e.target as HTMLElement).getAttribute('data-box-name')?.replace(/\s+/g, '')
 				const messageField = document.querySelector('textarea[name="message"]') as HTMLInputElement
 				if (messageField) {
 					messageField.value = `Hola! Estoy interesad@ en alquilar el ${boxName}. Os envío mis datos de contacto!`
