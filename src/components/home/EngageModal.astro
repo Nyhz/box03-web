@@ -1,0 +1,95 @@
+---
+import TableTest from './tableTest.astro'
+---
+
+<section id="desktop-only" class="mx-auto bg-primary-bg-component px-4 py-12 md:py-16">
+	<div class="mx-auto flex max-w-2xl flex-col items-center justify-center gap-y-6">
+		<h2 class="text-center text-4xl text-primary-title">Elige tu trastero ahora</h2>
+		<p class="text-center text-primary-text">
+			Box03 ofrece un servicio exclusivo de alquiler de trasteros en Ceuta, proporcionando
+			soluciones de almacenamiento seguras y adaptadas a tus necesidades.
+		</p>
+		<label
+			for="tw-modal"
+			class="cursor-pointer rounded-full bg-primary-accent px-6 py-4 font-medium text-black duration-500 hover:bg-yellow-300"
+		>
+			Ver trasteros disponibles
+		</label>
+		<!--hidden toggle -->
+		<input type="checkbox" id="tw-modal" class="peer fixed appearance-none opacity-0" />
+		<!--modal -->
+		<div
+			id="modal-container"
+			class="pointer-events-none fixed inset-0 flex items-center justify-center bg-slate-100/30 opacity-0 transition-all duration-200 ease-in-out peer-checked:pointer-events-auto peer-checked:opacity-100"
+		>
+			<!--modal-box -->
+			<div
+				class="max-h-[calc(100vh-5em)] w-full max-w-6xl overflow-x-auto overflow-y-auto rounded-md bg-black p-6 pt-12 text-white shadow-2xl transition md:pt-6"
+			>
+				<TableTest />
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	@media (max-width: 768px) {
+		/* Ocultar la sección en dispositivos móviles */
+		#desktop-only {
+			display: none;
+		}
+	}
+
+	@media (min-width: 769px) {
+		/* Mostrar la sección en dispositivos de escritorio */
+		#desktop-only {
+			display: block;
+		}
+	}
+	body.modal-open {
+		overflow: hidden;
+	}
+</style>
+
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		const modalCheckbox = document.querySelector('#tw-modal') as HTMLInputElement
+		const modalContainer = document.getElementById('modal-container')
+
+		if (modalCheckbox) {
+			modalCheckbox.addEventListener('change', (event) => {
+				const target = event.target as HTMLInputElement
+				if (target.checked) {
+					document.body.classList.add('modal-open')
+				} else {
+					document.body.classList.remove('modal-open')
+				}
+			})
+		}
+
+		// Close modal when clicking on a link inside the modal
+		document.querySelectorAll('.contact-button').forEach((button) => {
+			button.addEventListener('click', (e) => {
+				const boxName = (e.target as HTMLElement).getAttribute('data-box-name')?.replace(/\s+/g, '')
+				const messageField = document.querySelector('textarea[name="message"]') as HTMLInputElement
+				if (messageField) {
+					messageField.value = `Hola! Estoy interesad@ en alquilar el ${boxName}. Os envío mis datos de contacto!`
+				}
+				if (modalCheckbox.checked) {
+					modalCheckbox.checked = false
+					document.body.classList.remove('modal-open')
+				}
+			})
+		})
+
+		// Close modal when clicking outside of the modal content
+		if (modalContainer) {
+			modalContainer.addEventListener('click', (e) => {
+				if (modalCheckbox && e.target && e.target === modalContainer) {
+					modalCheckbox.checked = false
+					document.body.classList.remove('modal-open')
+				}
+			})
+		}
+	})
+</script>

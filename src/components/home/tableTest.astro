@@ -1,0 +1,40 @@
+---
+import Box from './components/Box.astro'
+
+import { storages } from '../../data/storages'
+---
+
+<section class="mx-auto max-w-6xl px-4 py-8 md:py-16">
+	<div class="overflow-x-auto px-2">
+		<h3 class="mb-6 text-4xl text-primary-title">Nuestros trasteros</h3>
+		<table class="w-full border-collapse border border-transparent text-primary-text">
+			<thead>
+				<tr>
+					<th
+						class="w-1/6 border border-transparent px-4 py-2 text-center align-middle text-primary-accent"
+						>Trastero</th
+					>
+					<th
+						class="w-1/6 border border-transparent px-4 py-2 text-center align-middle text-primary-accent"
+						>Superficie</th
+					>
+					<th
+						class="w-1/6 border border-transparent px-4 py-2 text-center align-middle text-primary-accent"
+						>Altura</th
+					>
+					<th
+						class="w-1/6 border border-transparent px-4 py-2 text-center align-middle text-primary-accent"
+						>Volumen</th
+					>
+					<th
+						class="w-1/6 border border-transparent px-4 py-2 text-center align-middle text-primary-accent"
+						>Precio mensual</th
+					>
+				</tr>
+			</thead>
+			<tbody>
+				{storages.map((box) => <Box {...box} />)}
+			</tbody>
+		</table>
+	</div>
+</section>
