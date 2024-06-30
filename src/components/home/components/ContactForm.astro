@@ -15,12 +15,20 @@ if (Astro.request.method === 'POST') {
 		const email = data.get('email') as string
 		const phone = data.get('phone') as string
 		const message = data.get('message') as string
+
+		const boxMatch = message.match(/\bbox\d{2}\b/i)
+		const box = boxMatch ? boxMatch[0] : null
+
 		if (isContentSafe(message)) {
+			const subject = box
+				? `Trastero: ${box} - Interesado:${name} - Teléfono: ${phone}`
+				: `Interesado:${name} - Teléfono: ${phone}`
+
 			const msg = {
 				to: 'gestionbox03@gmail.com',
 				from: 'gestionbox03@gmail.com',
 				replyTo: { email: email, name: name },
-				subject: `Contacto de ${name} - Teléfono: ${phone}`,
+				subject: subject,
 				text: `${message}
 			\n\n
 			Nombre: ${name} 
@@ -78,7 +86,7 @@ if (Astro.request.method === 'POST') {
 		placeholder="Mensaje"
 		autocomplete="off"
 		name="message"
-		maxlength="250"
+		maxlength="150"
 		required
 		>Hola! Estoy interesad@ en alquilar un trastero. Os envío mis datos de contacto!</textarea
 	>
