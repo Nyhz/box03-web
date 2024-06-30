@@ -1,48 +1,62 @@
 ---
 import TickIcon from '../../icons/TickIcon.astro'
 
-interface IPrincingCardProps {
+interface IStoragesProps {
+	id: number
 	name: string
-	description: string
-	isFlagged: boolean
-	periodicity: string
-	price: number
+	surface: string
+	height: string
+	volume: string
+	price: string
 	available: boolean
-	features: string[]
 }
 
-const { name, description, isFlagged, periodicity, price, available, features } =
-	Astro.props as IPrincingCardProps
+const { id, name, surface, height, volume, price, available } = Astro.props as IStoragesProps
 ---
 
-<div
-	class:list={[
-		'flex flex-col rounded-3xl p-8',
-		isFlagged ? 'bg-primary-bg-component' : 'bg-transparent'
-	]}
->
-	<h3 class="text-primary-title">{name}</h3>
+<div class="flex flex-col rounded-3xl bg-primary-bg-component p-8">
+	<h2 class="text-4xl text-primary-accent">{name}</h2>
 	<p class="mt-4 text-3xl text-primary-title">
-		<span class="text-sm text-primary-title">desde </span>{price}{' '}<span
-			class="text-sm text-primary-text">{periodicity}</span
-		>
+		{price}{' '}<span class="text-sm text-primary-text">/mes</span>
 	</p>
-	<p class="text-md mt-4 text-primary-title">{description}</p>
 	<ul class="mt-6 space-y-6">
-		{
-			features.map((feature) => (
-				<li class="flex cursor-default gap-3 transition-all duration-300 hover:translate-x-4">
-					<TickIcon />
-					<span class="text-primary-text">{feature}</span>
-				</li>
-			))
-		}
+		<li class="flex gap-3">
+			<TickIcon />
+			<span class="text-primary-text">Superficie: {surface}</span>
+		</li>
+		<li class="flex gap-3">
+			<TickIcon />
+			<span class="text-primary-text">Altura: {height}</span>
+		</li>
+		<li class="flex gap-3">
+			<TickIcon />
+			<span class="text-primary-text">Volumen: {volume}</span>
+		</li>
 	</ul>
 
 	<a
-		href="#seccion-contacto"
+		href="#ampliemos"
 		class="contact-button duration-250 mt-6 cursor-pointer rounded-full bg-primary-text px-2 py-4 text-center text-primary-text-inverse transition-all hover:bg-primary-title-hovered disabled:cursor-default disabled:opacity-25 disabled:hover:bg-primary-text"
+		data-box-name={name}
+		onClick={(e) => handleButtonClick(e)}
 	>
-		{available ? 'Reservar ahora' : 'Agotado'}
+		Reservar
 	</a>
 </div>
+
+<script>
+	function handleButtonClick(e) {
+		e.preventDefault() // Prevent the default anchor behavior
+		const boxName = e.target.getAttribute('data-box-name')?.replace(/\s+/g, '')
+		const messageField = document.querySelector('textarea[name="message"]')
+		if (messageField) {
+			messageField.value = `Hola! Estoy interesad@ en alquilar el ${boxName}. Os envío mis datos de contacto!`
+		}
+		// Scroll to the contact section
+		document.querySelector('#ampliemos').scrollIntoView({ behavior: 'smooth' })
+	}
+
+	document.querySelectorAll('.contact-button').forEach((button) => {
+		button.addEventListener('click', handleButtonClick)
+	})
+</script>

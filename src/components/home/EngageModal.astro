@@ -2,7 +2,7 @@
 import TableTest from './tableTest.astro'
 ---
 
-<section class="mx-auto bg-primary-bg-component px-4 py-12 md:py-16">
+<section id="desktop-only" class="mx-auto bg-primary-bg-component px-4 py-12 md:py-16">
 	<div class="mx-auto flex max-w-2xl flex-col items-center justify-center gap-y-6">
 		<h2 class="text-center text-4xl text-primary-title">Elige tu trastero ahora</h2>
 		<p class="text-center text-primary-text">
@@ -33,6 +33,19 @@ import TableTest from './tableTest.astro'
 </section>
 
 <style>
+	@media (max-width: 768px) {
+		/* Ocultar la sección en dispositivos móviles */
+		#desktop-only {
+			display: none;
+		}
+	}
+
+	@media (min-width: 769px) {
+		/* Mostrar la sección en dispositivos de escritorio */
+		#desktop-only {
+			display: block;
+		}
+	}
 	body.modal-open {
 		overflow: hidden;
 	}
