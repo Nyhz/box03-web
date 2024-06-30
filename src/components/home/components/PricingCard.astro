@@ -38,22 +38,25 @@ const { id, name, surface, height, volume, price, available } = Astro.props as I
 		href="#ampliemos"
 		class="contact-button duration-250 mt-6 cursor-pointer rounded-full bg-primary-text px-2 py-4 text-center text-primary-text-inverse transition-all hover:bg-primary-title-hovered disabled:cursor-default disabled:opacity-25 disabled:hover:bg-primary-text"
 		data-box-name={name}
-		onClick={(e) => handleButtonClick(e)}
 	>
 		Reservar
 	</a>
 </div>
 
 <script>
-	function handleButtonClick(e) {
+	function handleButtonClick(e: Event) {
 		e.preventDefault() // Prevent the default anchor behavior
-		const boxName = e.target.getAttribute('data-box-name')?.replace(/\s+/g, '')
-		const messageField = document.querySelector('textarea[name="message"]')
+		const target = e.target as HTMLElement
+		const boxName = target.getAttribute('data-box-name')?.replace(/\s+/g, '')
+		const messageField = document.querySelector('textarea[name="message"]') as HTMLTextAreaElement
 		if (messageField) {
 			messageField.value = `Hola! Estoy interesad@ en alquilar el ${boxName}. Os envío mis datos de contacto!`
 		}
 		// Scroll to the contact section
-		document.querySelector('#ampliemos').scrollIntoView({ behavior: 'smooth' })
+		const contactSection = document.querySelector('#ampliemos')
+		if (contactSection) {
+			contactSection.scrollIntoView({ behavior: 'smooth' })
+		}
 	}
 
 	document.querySelectorAll('.contact-button').forEach((button) => {
