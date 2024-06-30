@@ -36,7 +36,8 @@ const { id, name, surface, height, volume, price, available } = Astro.props as I
 					? 'bg-primary-accent hover:bg-yellow-300 text-black cursor-pointer'
 					: 'bg-primary-text hover:bg-dark-primary-title-hovered text-primary-text-inverse pointer-events-none'
 			} disabled:cursor-default disabled:opacity-25 disabled:hover:bg-primary-text`}
-		>
+			data-box-name={name}>
+	
 			{available ? 'Reservar' : 'No disponible'}
 		</a>
 	</td>
