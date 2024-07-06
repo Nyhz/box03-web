@@ -11,20 +11,22 @@ const links = [
 ---
 
 <header
-	class='sticky top-0 z-50 w-full animate-fade-down bg-primary-bg transition-all duration-500 animate-duration-1000'
+	class="sticky top-0 z-50 w-full animate-fade-down bg-primary-bg transition-all duration-500 animate-duration-1000"
 >
-	<div class='mx-auto flex h-full w-full max-w-6xl items-center justify-between px-4 py-4'>
-		<a class='hoverable text-3xl text-primary-title' href='/'
-			>box<span class='text-primary-accent'>03</span></a
-		>
-		<div class='hoverable flex gap-x-12'>
-			<div class='hidden gap-x-6 sm:flex sm:gap-x-12'>
-				<div class='flex gap-x-2'>
-					<AddressIcon />
-					<p class='duration-250 text-primary-title'>Calle Sargento Mena 10</p>
+	<div class="mx-auto flex w-full max-w-6xl items-center justify-between px-4 pt-4">
+		<div class="flex items-center">
+			<a href="/" class="hoverable flex items-center gap-x-12">
+				<img class="h-11" src="/public/images/logo.webp" alt="Logo de box03" />
+			</a>
+		</div>
+		<div class="-mt-6 ml-auto flex items-center gap-x-6 sm:gap-x-12">
+			<div class="hidden items-center gap-x-6 sm:flex sm:gap-x-12">
+				<div class="flex items-center gap-x-2">
+					<AddressIcon customClass="h-6 w-6" />
+					<p class="duration-250 text-primary-title">Calle Sargento Mena 10</p>
 				</div>
 			</div>
-			<div class='flex gap-x-6 sm:gap-x-12'>
+			<div class="mt-1 flex items-center gap-x-6 sm:gap-x-12">
 				{links.map((link) => <HeaderLink name={link.name} href={link.href} />)}
 			</div>
 		</div>
