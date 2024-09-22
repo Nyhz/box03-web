@@ -1,7 +1,17 @@
 ---
 import PricingCard from '../home/components/PricingCard.astro'
 
-import { storages } from '../../data/storages'
+import { storages as fallbackStorages } from '../../data/storages'
+import { getStorages } from '../../lib/querySanity'
+import type { IStoragesProps } from '../../types/types'
+
+let storages: IStoragesProps[] = []
+
+try {
+	storages = await getStorages()
+} catch (error) {
+	storages = fallbackStorages
+}
 ---
 
 <style>

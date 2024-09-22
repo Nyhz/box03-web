@@ -1,7 +1,17 @@
 ---
 import Box from './components/Box.astro'
 
-import { storages } from '../../data/storages'
+import { storages as fallbackStorages } from '../../data/storages'
+import { getStorages } from '../../lib/querySanity'
+import type { IStoragesProps } from '../../types/types'
+
+let storages: IStoragesProps[] = []
+try {
+	storages = await getStorages()
+} catch (error) {
+	storages = fallbackStorages
+}
+
 ---
 
 <section class="mx-auto max-w-6xl px-4 py-8 md:py-16">
@@ -33,7 +43,9 @@ import { storages } from '../../data/storages'
 				</tr>
 			</thead>
 			<tbody>
-				{storages.map((box) => <Box {...box} />)}
+				{
+					storages.map((box) => <Box {...box} />)
+				}
 			</tbody>
 		</table>
 	</div>

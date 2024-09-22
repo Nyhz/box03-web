@@ -1,17 +1,9 @@
 ---
 import TickIcon from '../../icons/TickIcon.astro'
 
-interface IStoragesProps {
-	id: number
-	name: string
-	surface: string
-	height: string
-	volume: string
-	price: string
-	available: boolean
-}
+import type { IStoragesProps } from '../../../types/types'
 
-const { id, name, surface, height, volume, price, available } = Astro.props as IStoragesProps
+const { name, surface, height, volume, price} = Astro.props as IStoragesProps
 ---
 
 <div class="flex flex-col rounded-3xl bg-primary-bg-component p-8">
