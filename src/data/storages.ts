@@ -24,7 +24,7 @@ export const storages = [
 		height: '2.53 m',
 		volume: '4.98 m³',
 		price: '95 €',
-		available: true
+		available: false
 	},
 	{
 		id: '4',
@@ -33,7 +33,7 @@ export const storages = [
 		height: '2.53 m',
 		volume: '5.24 m³',
 		price: '95 €',
-		available: true
+		available: false
 	},
 	{
 		id: '5',
@@ -42,7 +42,7 @@ export const storages = [
 		height: '2.53 m',
 		volume: '7.19 m³',
 		price: '130 €',
-		available: true
+		available: false
 	},
 	{
 		id: '6',
@@ -51,7 +51,7 @@ export const storages = [
 		height: '2.53 m',
 		volume: '7.99 m³',
 		price: '145 €',
-		available: true
+		available: false
 	},
 	{
 		id: '7',
@@ -114,7 +114,7 @@ export const storages = [
 		height: '2.53 m',
 		volume: '7.44 m³',
 		price: '130 €',
-		available: true
+		available: false
 	},
 	{
 		id: '14',
@@ -177,7 +177,7 @@ export const storages = [
 		height: '2.53 m',
 		volume: '9.06 m³',
 		price: '160 €',
-		available: true
+		available: false
 	},
 	{
 		id: '21',
