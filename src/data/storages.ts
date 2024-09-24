@@ -123,7 +123,7 @@ export const storages = [
 		height: '2.53 m',
 		volume: '7.41 m³',
 		price: '130 €',
-		available: true
+		available: false
 	},
 	{
 		id: '15',
@@ -177,7 +177,7 @@ export const storages = [
 		height: '2.53 m',
 		volume: '9.06 m³',
 		price: '160 €',
-		available: false
+		available: true
 	},
 	{
 		id: '21',
